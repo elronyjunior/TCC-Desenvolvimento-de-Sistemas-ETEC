@@ -1,0 +1,254 @@
+[gd_scene load_steps=13 format=3 uid="uid://bg5d1iets4p6e"]
+
+[ext_resource type="Script" path="res://scripts/title_screem.gd" id="1_4iq0c"]
+[ext_resource type="Theme" uid="uid://c4y3qsc3ijdi5" path="res://Player/menu.HUD/temas/default.tres" id="2_8cjwo"]
+[ext_resource type="Texture2D" uid="uid://srll4t6ro7sp" path="res://cenas/title screem/logo2.png" id="3_355u7"]
+[ext_resource type="Texture2D" uid="uid://b1nv2par1q53a" path="res://cenas/title screem/inicial.png" id="3_og74e"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_648lr"]
+
+[sub_resource type="Animation" id="Animation_7hedf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fade:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("fade:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_mloia"]
+resource_name = "fade_in"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fade:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("fade:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_cw8o8"]
+resource_name = "fade_out"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fade:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("fade:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5wamk"]
+_data = {
+"RESET": SubResource("Animation_7hedf"),
+"fade_in": SubResource("Animation_mloia"),
+"fade_out": SubResource("Animation_cw8o8")
+}
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cd382"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xbh8x"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qqrfa"]
+
+[node name="title_screem" type="Control" node_paths=PackedStringArray("animation")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4iq0c")
+animation = NodePath("AnimationPlayer")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.301961, 0.376471, 0.529412, 1)
+
+[node name="HSeparator" type="HSeparator" parent="."]
+custom_minimum_size = Vector2(50, 10)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.585
+anchor_right = 1.0
+anchor_bottom = 0.603
+offset_top = -0.0800171
+offset_right = 2.0
+offset_bottom = 0.255981
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_648lr")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_5wamk")
+}
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(1150, 650)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+texture = ExtResource("3_og74e")
+expand_mode = 3
+stretch_mode = 6
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HSeparator" type="HSeparator" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/separator = SubResource("StyleBoxEmpty_cd382")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VSeparator3" type="VSeparator" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+size_flags_stretch_ratio = 0.27
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.64
+texture = ExtResource("3_355u7")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="btn_new_game" type="Button" parent="HBoxContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_8cjwo")
+text = "Novo Jogo"
+
+[node name="HSeparator" type="HSeparator" parent="HBoxContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/separator = SubResource("StyleBoxEmpty_648lr")
+
+[node name="btn_continue" type="Button" parent="HBoxContainer/VBoxContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_8cjwo")
+text = "ContInuar"
+
+[node name="HSeparator2" type="HSeparator" parent="HBoxContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/separator = SubResource("StyleBoxEmpty_xbh8x")
+
+[node name="config" type="Button" parent="HBoxContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_8cjwo")
+text = "confIgurações"
+
+[node name="HSeparator3" type="HSeparator" parent="HBoxContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/separator = SubResource("StyleBoxEmpty_xbh8x")
+
+[node name="btn_quit" type="Button" parent="HBoxContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_8cjwo")
+text = "SaIr"
+
+[node name="VSeparator2" type="VSeparator" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+size_flags_stretch_ratio = 0.27
+theme_override_styles/separator = SubResource("StyleBoxEmpty_qqrfa")
+
+[node name="HSeparator2" type="HSeparator" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/separator = SubResource("StyleBoxEmpty_cd382")
+
+[node name="fade" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/VBoxContainer/btn_new_game" to="." method="_on_btn_new_game_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/VBoxContainer/btn_continue" to="." method="_on_btn_continue_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/VBoxContainer/config" to="." method="_on_config_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/VBoxContainer/btn_quit" to="." method="_on_btn_quit_pressed"]

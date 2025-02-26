@@ -1,0 +1,15 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://cxbgiajvlfuni"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yj315"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rcbdn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d7ij2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ynyn3"]
+
+[resource]
+ItemList/styles/hovered = SubResource("StyleBoxEmpty_yj315")
+ItemList/styles/panel = SubResource("StyleBoxEmpty_rcbdn")
+ItemList/styles/selected = SubResource("StyleBoxEmpty_d7ij2")
+ItemList/styles/selected_focus = SubResource("StyleBoxEmpty_ynyn3")

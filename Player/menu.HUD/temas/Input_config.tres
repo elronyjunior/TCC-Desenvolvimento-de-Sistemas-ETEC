@@ -1,0 +1,66 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://brdjnpeks2jbn"]
+
+[ext_resource type="FontFile" uid="uid://eabwntnbuc30" path="res://Player/hb.HUD/Gamer.ttf" id="1_5fhb7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iqubi"]
+bg_color = Color(0.704548, 0.0163553, 0.622032, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w2lk5"]
+bg_color = Color(0, 0.309436, 0.704155, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2kxs0"]
+bg_color = Color(0.957033, 0.091812, 0.571249, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i77o0"]
+bg_color = Color(0.429681, 0.577964, 0.806906, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0.309436, 0.704155, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c7nak"]
+
+[resource]
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/constants/outline_size = 10
+Button/font_sizes/font_size = 46
+Button/fonts/font = ExtResource("1_5fhb7")
+Button/styles/hover = SubResource("StyleBoxFlat_iqubi")
+Button/styles/normal = SubResource("StyleBoxFlat_w2lk5")
+Button/styles/pressed = SubResource("StyleBoxFlat_2kxs0")
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/constants/outline_size = 9
+Label/font_sizes/font_size = 49
+Label/fonts/font = ExtResource("1_5fhb7")
+Label/styles/normal = SubResource("StyleBoxFlat_i77o0")
+VSeparator/styles/separator = SubResource("StyleBoxEmpty_c7nak")

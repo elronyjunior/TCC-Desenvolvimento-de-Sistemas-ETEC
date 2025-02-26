@@ -1,0 +1,76 @@
+[gd_scene load_steps=8 format=3 uid="uid://cl327ogs0tq1o"]
+
+[ext_resource type="Script" path="res://levels/scripts/test_level.gd" id="1_r1yt2"]
+[ext_resource type="PackedScene" uid="uid://boyl7065nw8ut" path="res://UI/scenes/ui.tscn" id="2_uchfo"]
+[ext_resource type="PackedScene" uid="uid://b2oev3xol8uwr" path="res://levels/scenes/dungeon.tscn" id="3_2847a"]
+[ext_resource type="Script" path="res://levels/scripts/personagensSpawner.gd" id="4_v35fg"]
+[ext_resource type="PackedScene" uid="uid://bx2otk45yeutj" path="res://NPCs/NPC_tscn/axe_npc/npc_dungeon.tscn" id="5_agkg8"]
+[ext_resource type="PackedScene" uid="uid://nejfv7n3aswk" path="res://character/scenes/slime.tscn" id="6_mvhqb"]
+[ext_resource type="AudioStream" uid="uid://jq8ai0e6idmn" path="res://Audios/30 - Ruins.ogg" id="7_3uduf"]
+
+[node name="dungeon_level" type="Node2D"]
+position = Vector2(4, 4)
+script = ExtResource("1_r1yt2")
+
+[node name="UI" parent="." instance=ExtResource("2_uchfo")]
+
+[node name="Node2D" parent="." instance=ExtResource("3_2847a")]
+position = Vector2(0, -6)
+
+[node name="Ysort" type="Node2D" parent="."]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(0, -6)
+
+[node name="Personagens" type="Node2D" parent="Ysort"]
+y_sort_enabled = true
+position = Vector2(11, 2)
+script = ExtResource("4_v35fg")
+
+[node name="Marker2D" type="Marker2D" parent="Ysort/Personagens"]
+y_sort_enabled = true
+position = Vector2(36, 379)
+
+[node name="NpcDungeon" parent="Ysort" instance=ExtResource("5_agkg8")]
+position = Vector2(151, 363)
+
+[node name="Slime" parent="Ysort" instance=ExtResource("6_mvhqb")]
+position = Vector2(378, 380)
+
+[node name="Slime2" parent="Ysort" instance=ExtResource("6_mvhqb")]
+position = Vector2(392, 96)
+
+[node name="Slime3" parent="Ysort" instance=ExtResource("6_mvhqb")]
+position = Vector2(50, 243)
+
+[node name="Slime4" parent="Ysort" instance=ExtResource("6_mvhqb")]
+position = Vector2(84, 584)
+
+[node name="Slime5" parent="Ysort" instance=ExtResource("6_mvhqb")]
+position = Vector2(885, 598)
+
+[node name="Slime6" parent="Ysort" instance=ExtResource("6_mvhqb")]
+position = Vector2(806, 199)
+
+[node name="Slime7" parent="Ysort" instance=ExtResource("6_mvhqb")]
+position = Vector2(614, 399)
+
+[node name="Slime8" parent="Ysort" instance=ExtResource("6_mvhqb")]
+position = Vector2(963, 105)
+
+[node name="Slime9" parent="Ysort" instance=ExtResource("6_mvhqb")]
+position = Vector2(328, 496)
+
+[node name="Slime10" parent="Ysort" instance=ExtResource("6_mvhqb")]
+position = Vector2(980, 430)
+
+[node name="Itens" type="Node2D" parent="."]
+position = Vector2(1, -2)
+
+[node name="Audio" type="Node2D" parent="."]
+
+[node name="music_dungeon" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource("7_3uduf")
+autoplay = true
+bus = &"music"
+parameters/looping = true

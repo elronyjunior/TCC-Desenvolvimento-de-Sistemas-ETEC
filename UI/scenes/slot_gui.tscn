@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://didxf6bjh74qi"]
+
+[ext_resource type="Texture2D" uid="uid://jjkl3m00t3dn" path="res://UI/images/inventorySlot.png" id="1_ota6b"]
+[ext_resource type="Script" path="res://UI/scripts/slot_gui.gd" id="1_soc3v"]
+
+[node name="slot" type="Button"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+anchors_preset = -1
+anchor_right = 0.069
+anchor_bottom = 0.123
+offset_right = -39.488
+offset_bottom = -39.704
+scale = Vector2(2, 2)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_soc3v")
+
+[node name="background" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_ota6b")
+centered = false
+vframes = 2
+frame = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

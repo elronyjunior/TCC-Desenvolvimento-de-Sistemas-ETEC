@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="PlayerData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Player/player_data.gd" id="1_fd4hk"]
+
+[resource]
+script = ExtResource("1_fd4hk")
+player_name = "hkhjkh"
+player_class = "Human"
+player_nivel = 0
+player_texture = "res://Player/icon_skills/empty.png"
+save_slot = 1
+player_status = [10, 4, 2, 10]
+Save_Player_Position = Vector2(-182, -13)
+curent_scene = "res://cenas/Tutorial/Tutorial.tscn"
+screenshot_load = 0

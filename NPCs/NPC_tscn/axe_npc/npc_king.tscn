@@ -1,0 +1,103 @@
+[gd_scene load_steps=14 format=3 uid="uid://c1cwjfnyydvpk"]
+
+[ext_resource type="Script" path="res://NPCs/NPC_tscn/axe_npc/npc_king.gd" id="1_88q86"]
+[ext_resource type="Texture2D" uid="uid://dd3h1vxdysj4j" path="res://NPCs/NPC_tscn/assets/sprite-rei-PNG.png" id="2_xxske"]
+[ext_resource type="Texture2D" uid="uid://ckec8vhmjd7oe" path="res://NPCs/NPC_tscn/assets/Message-Exclamation.png" id="2_ye2kh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h4ylm"]
+size = Vector2(16, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4gkpv"]
+atlas = ExtResource("2_xxske")
+region = Rect2(0, 0, 18, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ek33o"]
+atlas = ExtResource("2_xxske")
+region = Rect2(18, 0, 18, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i5pv8"]
+atlas = ExtResource("2_xxske")
+region = Rect2(36, 0, 18, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_obemp"]
+atlas = ExtResource("2_xxske")
+region = Rect2(54, 0, 18, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_53dma"]
+atlas = ExtResource("2_xxske")
+region = Rect2(72, 0, 18, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7c8te"]
+atlas = ExtResource("2_xxske")
+region = Rect2(90, 0, 18, 22)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_smb28"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4gkpv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ek33o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i5pv8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_obemp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_53dma")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7c8te")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7lcp7"]
+radius = 96.6902
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_evwak"]
+size = Vector2(94, 107.5)
+
+[node name="NpcKing" type="CharacterBody2D" node_paths=PackedStringArray("aviso", "animation")]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_88q86")
+aviso = NodePath("AreaInteração/Sprite2D")
+animation = NodePath("AnimatedSprite2D")
+
+[node name="colision" type="CollisionShape2D" parent="."]
+position = Vector2(2, -2.5)
+shape = SubResource("RectangleShape2D_h4ylm")
+debug_color = Color(0.598663, 0, 0.155749, 0.42)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(4, -4)
+sprite_frames = SubResource("SpriteFrames_smb28")
+frame_progress = 0.637513
+
+[node name="AreaAviso" type="Area2D" parent="."]
+
+[node name="area_aviso" type="CollisionShape2D" parent="AreaAviso"]
+shape = SubResource("CircleShape2D_7lcp7")
+debug_color = Color(0.823529, 0.686275, 0, 0.0901961)
+
+[node name="AreaInteração" type="Area2D" parent="."]
+
+[node name="interação" type="CollisionShape2D" parent="AreaInteração"]
+shape = SubResource("RectangleShape2D_evwak")
+debug_color = Color(0.262745, 0.635294, 0, 0.172549)
+
+[node name="Sprite2D" type="Sprite2D" parent="AreaInteração"]
+visible = false
+position = Vector2(1, -18)
+scale = Vector2(0.576923, 0.576923)
+texture = ExtResource("2_ye2kh")
+
+[connection signal="body_entered" from="AreaAviso" to="." method="_on_body_aviso_area_entered"]
+[connection signal="body_exited" from="AreaAviso" to="." method="_on_body_aviso_area_exited"]
+[connection signal="body_entered" from="AreaInteração" to="." method="_on_body_interação_area_entered"]
+[connection signal="body_exited" from="AreaInteração" to="." method="_on_body_interação_area_exited"]

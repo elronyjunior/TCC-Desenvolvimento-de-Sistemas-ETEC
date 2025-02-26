@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cn6yqy0defssp"
+path="res://.godot/imported/musica medieval 2.mp3-fb25a6cec7d7150c1c85d0a7732fef0d.mp3str"
+
+[deps]
+
+source_file="res://Audios/Musicas Jogo/musica medieval 2.mp3"
+dest_files=["res://.godot/imported/musica medieval 2.mp3-fb25a6cec7d7150c1c85d0a7732fef0d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

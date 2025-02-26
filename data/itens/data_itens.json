@@ -1,0 +1,29 @@
+{
+  "0": {
+	"nome_itens": "cura",
+	"tipo_item": "poção",
+	"descricao": "ira te curar",
+	"dano": -10,
+	"velocidade": 0.7,
+	"durabilidade": 1,
+	"efeito": "nenhum"
+  },
+  "1": {
+	"nome_itens": "espada",
+	"tipo_item": "arma",
+	"descricao": "é uma espada b",
+	"dano": 20,
+	"velocidade": 1,
+	"durabilidade": 320,
+	"efeito": "fogo"
+  },
+  "2": {
+	"nome_itens": "armadura de couro",
+	"tipo_item": "armadura",
+	"descricao": "te protege",
+	"dano": 0,
+	"velocidade": 0,
+	"durabilidade": 500,
+	"efeito": "nenhum"
+  }
+}

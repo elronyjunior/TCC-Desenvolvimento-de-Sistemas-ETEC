@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bp7335l05wcny"]
+
+[node name="new_game_btn" type="PanelContainer"]
+custom_minimum_size = Vector2(271, 78)
+anchors_preset = -1
+anchor_right = 0.249
+anchor_bottom = 0.12
+offset_right = 0.151978
+offset_bottom = 0.239998
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 10
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "NEW GAME"

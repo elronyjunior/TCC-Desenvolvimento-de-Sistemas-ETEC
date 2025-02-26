@@ -1,0 +1,83 @@
+[gd_resource type="Resource" script_class="Inventory" load_steps=18 format=3 uid="uid://b8pmj0l0kqi1m"]
+
+[ext_resource type="Script" path="res://inventory/scripts/InventorySlot.gd" id="2_utaay"]
+[ext_resource type="Script" path="res://inventory/scripts/Inventory.gd" id="3_gqmr8"]
+
+[sub_resource type="Resource" id="Resource_euebl"]
+script = ExtResource("2_utaay")
+amount = 0
+maxAmountPrStack = 10
+
+[sub_resource type="Resource" id="Resource_stefl"]
+script = ExtResource("2_utaay")
+amount = 0
+maxAmountPrStack = 10
+
+[sub_resource type="Resource" id="Resource_e254l"]
+script = ExtResource("2_utaay")
+amount = 0
+maxAmountPrStack = 10
+
+[sub_resource type="Resource" id="Resource_uyadx"]
+script = ExtResource("2_utaay")
+amount = 0
+maxAmountPrStack = 10
+
+[sub_resource type="Resource" id="Resource_ms6m1"]
+script = ExtResource("2_utaay")
+amount = 0
+maxAmountPrStack = 10
+
+[sub_resource type="Resource" id="Resource_jb6ex"]
+script = ExtResource("2_utaay")
+amount = 0
+maxAmountPrStack = 10
+
+[sub_resource type="Resource" id="Resource_rbgcr"]
+script = ExtResource("2_utaay")
+amount = 0
+maxAmountPrStack = 10
+
+[sub_resource type="Resource" id="Resource_doxm7"]
+script = ExtResource("2_utaay")
+amount = 0
+maxAmountPrStack = 10
+
+[sub_resource type="Resource" id="Resource_8fkqq"]
+script = ExtResource("2_utaay")
+amount = 0
+maxAmountPrStack = 10
+
+[sub_resource type="Resource" id="Resource_dwfdk"]
+script = ExtResource("2_utaay")
+amount = 0
+maxAmountPrStack = 10
+
+[sub_resource type="Resource" id="Resource_iwb8j"]
+script = ExtResource("2_utaay")
+amount = 0
+maxAmountPrStack = 10
+
+[sub_resource type="Resource" id="Resource_ocq2s"]
+script = ExtResource("2_utaay")
+amount = 0
+maxAmountPrStack = 10
+
+[sub_resource type="Resource" id="Resource_23qwr"]
+script = ExtResource("2_utaay")
+amount = 0
+maxAmountPrStack = 10
+
+[sub_resource type="Resource" id="Resource_q1fp4"]
+script = ExtResource("2_utaay")
+amount = 0
+maxAmountPrStack = 10
+
+[sub_resource type="Resource" id="Resource_xdtpb"]
+script = ExtResource("2_utaay")
+amount = 0
+maxAmountPrStack = 10
+
+[resource]
+script = ExtResource("3_gqmr8")
+slots = Array[ExtResource("2_utaay")]([SubResource("Resource_euebl"), SubResource("Resource_stefl"), SubResource("Resource_e254l"), SubResource("Resource_uyadx"), SubResource("Resource_ms6m1"), SubResource("Resource_jb6ex"), SubResource("Resource_rbgcr"), SubResource("Resource_doxm7"), SubResource("Resource_8fkqq"), SubResource("Resource_dwfdk"), SubResource("Resource_iwb8j"), SubResource("Resource_ocq2s"), SubResource("Resource_23qwr"), SubResource("Resource_q1fp4"), SubResource("Resource_xdtpb")])

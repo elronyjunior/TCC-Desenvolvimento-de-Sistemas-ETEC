@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://t26ycn36v4sr"]
+
+[ext_resource type="Script" path="res://scripts/testlogico.gd" id="1_sgqli"]
+
+[sub_resource type="Animation" id="Animation_l3mef"]
+resource_name = "asdsad"
+length = 10.0
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_h0xng"]
+_data = {
+"asdsad": SubResource("Animation_l3mef")
+}
+
+[node name="Node2D" type="Node2D" node_paths=PackedStringArray("animation")]
+script = ExtResource("1_sgqli")
+animation = NodePath("AnimationPlayer")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_h0xng")
+}

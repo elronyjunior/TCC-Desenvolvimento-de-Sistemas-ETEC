@@ -1,0 +1,96 @@
+[gd_scene load_steps=4 format=3 uid="uid://yfwpxs7darry"]
+
+[ext_resource type="Script" path="res://Player/menu.HUD/config/config.gd" id="1_hxyty"]
+[ext_resource type="Theme" uid="uid://c4y3qsc3ijdi5" path="res://Player/menu.HUD/temas/default.tres" id="2_rn4t6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nalkt"]
+
+[node name="config" type="CanvasLayer" node_paths=PackedStringArray("HboxContainer", "margin_container", "label_panel")]
+script = ExtResource("1_hxyty")
+HboxContainer = NodePath("Control/MarginContainer/HBoxContainer")
+margin_container = NodePath("Control/MarginContainer")
+label_panel = NodePath("Control/MarginContainer/HBoxContainer/Panel/Label")
+metadata/_edit_horizontal_guides_ = [21.0]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BoxContainer" type="BoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.334
+anchor_top = 0.148
+anchor_right = 0.673
+anchor_bottom = 0.742
+offset_left = 0.231964
+offset_top = 0.0960007
+offset_right = -0.296021
+offset_bottom = 0.18396
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="btn_quit" type="Button" parent="Control/BoxContainer/VBoxContainer"]
+process_mode = 3
+layout_mode = 2
+theme = ExtResource("2_rn4t6")
+text = "Restaurar"
+
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Panel" type="Panel" parent="Control/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme = ExtResource("2_rn4t6")
+
+[node name="Label" type="Label" parent="Control/MarginContainer/HBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.005
+anchor_bottom = 0.69
+offset_bottom = -1.52588e-05
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_nalkt")
+text = "aperte um input valido..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="Control/MarginContainer/HBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.337
+anchor_top = 0.707
+anchor_right = 0.675
+anchor_bottom = 0.82
+offset_left = 0.199997
+offset_top = -0.100006
+offset_bottom = -1.52588e-05
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("2_rn4t6")
+text = "Voltar"
+
+[connection signal="pressed" from="Control/BoxContainer/VBoxContainer/btn_quit" to="." method="_on_btn_quit_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/HBoxContainer/Panel/Button" to="." method="_on_button_pressed"]

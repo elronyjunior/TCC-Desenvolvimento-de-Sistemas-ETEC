@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://caahy762r4fx7"]
+
+[ext_resource type="Texture2D" uid="uid://cyprxspb6isjg" path="res://terreno/assets/objects.png" id="1_d2c32"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gar1k"]
+texture = ExtResource("1_d2c32")
+0:5/size_in_atlas = Vector2i(3, 4)
+0:5/0 = 0
+0:5/0/texture_origin = Vector2i(0, 18)
+0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -10.5182, -3.8007, -11.7557, -0.972272, -10.1647, -0.0883884, -11.7557, 0.972272, -11.7557, 4.68458, -8, 4.86136, -8, 8, 9.63433, 8.04334, 9.63433, 4.68458, 11.7557, 3.62392, 11.7557, 0.441941, 8, -5.92202, 8, -8)
+0:1/0 = 0
+0:0/0 = 0
+6:7/size_in_atlas = Vector2i(2, 2)
+6:7/0 = 0
+6:7/0/texture_origin = Vector2i(0, 8)
+6:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-15.9099, -8.04334, 14.3189, -8.92722, 15.9099, 2.20971, 8, 7.33623, -14.3189, 7.15946, -16.2635, 1.32583)
+8:6/size_in_atlas = Vector2i(2, 3)
+8:6/0 = 0
+8:6/0/texture_origin = Vector2i(0, 16)
+8:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-10.9602, -7.86656, 9.54594, -7.68979, 8, -0.972272, 5.3033, 5.56847, -4.41942, 5.03814, -9.72272, -0.265165)
+10:7/size_in_atlas = Vector2i(2, 2)
+10:7/0 = 0
+10:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6.36396, -8, 6.54074, -8, 11.844, 1.5026, 12.1976, 4.33103, 9.36917, 9.81111, -5.12652, 9.81111, -11.6673, 5.92202, -11.844, -1.14905)
+
+[sub_resource type="TileSet" id="TileSet_84mcu"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_gar1k")
+
+[node name="Objetos_terreno" type="TileMap"]
+y_sort_enabled = true
+tile_set = SubResource("TileSet_84mcu")
+format = 2
+layer_0/y_sort_enabled = true

@@ -1,0 +1,113 @@
+[gd_scene load_steps=7 format=3 uid="uid://btipkgbeiceu2"]
+
+[ext_resource type="Script" path="res://NPCs/dialogue/dialogue_text.gd" id="1_a3iko"]
+[ext_resource type="Texture2D" uid="uid://d2ehrkfnosec2" path="res://NPCs/dialogue/dialogue card box.png" id="2_fa3r1"]
+[ext_resource type="FontFile" uid="uid://c87r46h3mobcq" path="res://cenas/Login/Gamer.ttf" id="3_yuxfb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_68sl1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s0o2x"]
+
+[sub_resource type="Theme" id="Theme_y07wy"]
+HSeparator/styles/separator = SubResource("StyleBoxEmpty_68sl1")
+VSeparator/styles/separator = SubResource("StyleBoxEmpty_s0o2x")
+
+[node name="Dialogue" type="Control" node_paths=PackedStringArray("text", "timer")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_a3iko")
+text = NodePath("HBoxContainer/VBoxContainer/NinePatchRect/HBoxContainer/VBoxContainer/Text")
+timer = NodePath("LetterTime")
+
+[node name="LetterTime" type="Timer" parent="."]
+wait_time = 0.01
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_y07wy")
+
+[node name="HSeparator" type="HSeparator" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.08
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.66
+
+[node name="VSeparator" type="VSeparator" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="NinePatchRect" type="NinePatchRect" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+texture = ExtResource("2_fa3r1")
+region_rect = Rect2(-0.5, 0, 689, 165)
+patch_margin_left = 41
+patch_margin_top = 28
+patch_margin_right = 86
+patch_margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HSeparator" type="HSeparator" parent="HBoxContainer/VBoxContainer/NinePatchRect/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.03
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/NinePatchRect/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VSeparator" type="VSeparator" parent="HBoxContainer/VBoxContainer/NinePatchRect/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+
+[node name="Text" type="RichTextLabel" parent="HBoxContainer/VBoxContainer/NinePatchRect/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("3_yuxfb")
+theme_override_font_sizes/normal_font_size = 40
+scroll_active = false
+
+[node name="VSeparator2" type="VSeparator" parent="HBoxContainer/VBoxContainer/NinePatchRect/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+
+[node name="HSeparator2" type="HSeparator" parent="HBoxContainer/VBoxContainer/NinePatchRect/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.03
+
+[node name="VSeparator2" type="VSeparator" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.08
+
+[node name="HSeparator2" type="HSeparator" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.08
+
+[connection signal="timeout" from="LetterTime" to="." method="LetterTime_Tick"]

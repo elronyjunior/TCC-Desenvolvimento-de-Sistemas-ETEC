@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://chdv7ng02w2uc"]
+
+[ext_resource type="Script" path="res://levels/scripts/scene_trigger.gd" id="1_6qbs1"]
+
+[node name="SceneTrigger" type="Area2D"]
+collision_layer = 0
+collision_mask = 8
+script = ExtResource("1_6qbs1")
+connected_scene = "level_boss"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

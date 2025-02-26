@@ -1,0 +1,74 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdxv44sbv13qg"]
+
+[ext_resource type="Script" path="res://Player/menu.HUD/menu/menu.gd" id="1_twjgx"]
+[ext_resource type="Theme" uid="uid://c4y3qsc3ijdi5" path="res://Player/menu.HUD/temas/default.tres" id="2_ieeqf"]
+
+[node name="menu" type="CanvasLayer"]
+process_mode = 3
+process_priority = 1
+script = ExtResource("1_twjgx")
+
+[node name="Control" type="Control" parent="."]
+process_mode = 3
+process_priority = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="bg_overlay" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.117647)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -87.0
+offset_right = 87.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="btn_resume" type="Button" parent="Control/HBoxContainer/VBoxContainer"]
+process_mode = 3
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme = ExtResource("2_ieeqf")
+text = "Resume"
+
+[node name="btn_config" type="Button" parent="Control/HBoxContainer/VBoxContainer"]
+process_mode = 3
+layout_mode = 2
+theme = ExtResource("2_ieeqf")
+text = "Config"
+
+[node name="btn_quit" type="Button" parent="Control/HBoxContainer/VBoxContainer"]
+process_mode = 3
+layout_mode = 2
+theme = ExtResource("2_ieeqf")
+text = "Quit game"
+
+[node name="btn_screenshot" type="Button" parent="Control/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_ieeqf")
+text = "Screenshot"
+
+[connection signal="pressed" from="Control/HBoxContainer/VBoxContainer/btn_resume" to="." method="_on_btn_resume_pressed"]
+[connection signal="pressed" from="Control/HBoxContainer/VBoxContainer/btn_config" to="." method="_on_btn_config_pressed"]
+[connection signal="pressed" from="Control/HBoxContainer/VBoxContainer/btn_quit" to="." method="_on_btn_quit_pressed"]
+[connection signal="pressed" from="Control/HBoxContainer/VBoxContainer/btn_screenshot" to="." method="_on_btn_screenshot_pressed"]

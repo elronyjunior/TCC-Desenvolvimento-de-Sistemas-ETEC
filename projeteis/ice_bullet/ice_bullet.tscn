@@ -1,0 +1,177 @@
+[gd_scene load_steps=20 format=3 uid="uid://2sms3xi0if7t"]
+
+[ext_resource type="Script" path="res://projeteis/ice_bullet/Area2D.gd" id="1_msdth"]
+[ext_resource type="Texture2D" uid="uid://d3t026fhdwawf" path="res://projeteis/Ice VFX 1 192x192.png" id="2_jlkvp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0q616"]
+size = Vector2(25.4286, 14)
+
+[sub_resource type="Animation" id="Animation_83iu6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_mb83b"]
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [13, 14, 15, 16, 17, 18, 19]
+}
+
+[sub_resource type="Animation" id="Animation_0i577"]
+resource_name = "new_animation"
+
+[sub_resource type="Animation" id="Animation_ebklg"]
+resource_name = "surgir"
+length = 0.9
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [4, 5, 6, 7, 8, 9, 10, 11, 12]
+}
+
+[sub_resource type="Animation" id="Animation_41niw"]
+resource_name = "destroy"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_syjb2"]
+_data = {
+"RESET": SubResource("Animation_83iu6"),
+"destroy": SubResource("Animation_mb83b"),
+"new_animation": SubResource("Animation_0i577"),
+"spin": SubResource("Animation_ebklg"),
+"surgir": SubResource("Animation_41niw")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_61rgt"]
+animation = &"destroy"
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_kyqmo"]
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_5xfjk"]
+graph_offset = Vector2(-521.938, 0)
+nodes/Animation/node = SubResource("AnimationNodeAnimation_61rgt")
+nodes/Animation/position = Vector2(-200, 120)
+nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_kyqmo")
+nodes/TimeScale/position = Vector2(0, 120)
+node_connections = [&"TimeScale", 0, &"Animation", &"output", 0, &"TimeScale"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_sa4p0"]
+animation = &"spin"
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_tqbn0"]
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_u6c5v"]
+graph_offset = Vector2(-551.568, 0)
+nodes/Animation/node = SubResource("AnimationNodeAnimation_sa4p0")
+nodes/Animation/position = Vector2(-220, 120)
+nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_tqbn0")
+nodes/TimeScale/position = Vector2(0, 100)
+node_connections = [&"TimeScale", 0, &"Animation", &"output", 0, &"TimeScale"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_j1dpl"]
+animation = &"surgir"
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_v6ucr"]
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_fb4oy"]
+graph_offset = Vector2(-360.71, 0)
+nodes/Animation/node = SubResource("AnimationNodeAnimation_j1dpl")
+nodes/Animation/position = Vector2(-200, 140)
+nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_v6ucr")
+nodes/TimeScale/position = Vector2(20, 140)
+node_connections = [&"TimeScale", 0, &"Animation", &"output", 0, &"TimeScale"]
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_nqpnp"]
+states/Start/position = Vector2(168, 100)
+states/destroy/node = SubResource("AnimationNodeBlendTree_5xfjk")
+states/destroy/position = Vector2(765, 100)
+states/spin/node = SubResource("AnimationNodeBlendTree_u6c5v")
+states/spin/position = Vector2(591, 100)
+states/surgir/node = SubResource("AnimationNodeBlendTree_fb4oy")
+states/surgir/position = Vector2(421, 100)
+
+[node name="ice_bullet" type="Area2D" node_paths=PackedStringArray("animation_tree", "timer_surgir", "ice_bullet", "sumir") groups=["magias"]]
+scale = Vector2(0.7, 0.7)
+script = ExtResource("1_msdth")
+animation_tree = NodePath("AnimationTree")
+timer_surgir = NodePath("surgir")
+speed = 3.0
+ice_bullet = NodePath("ice_sprite")
+sumir = NodePath("sumir")
+
+[node name="ice_sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_jlkvp")
+hframes = 5
+vframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+show_behind_parent = true
+position = Vector2(-1.28571, 1)
+shape = SubResource("RectangleShape2D_0q616")
+
+[node name="ice_animation" type="AnimationPlayer" parent="."]
+root_node = NodePath("../ice_sprite")
+libraries = {
+"": SubResource("AnimationLibrary_syjb2")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+root_node = NodePath("../ice_sprite")
+tree_root = SubResource("AnimationNodeStateMachine_nqpnp")
+anim_player = NodePath("../ice_animation")
+parameters/destroy/TimeScale/scale = 1.0
+parameters/spin/TimeScale/scale = 1.1
+parameters/surgir/TimeScale/scale = 1.5
+
+[node name="surgir" type="Timer" parent="."]
+wait_time = 0.3
+one_shot = true
+autostart = true
+
+[node name="sumir" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="animation_finished" from="AnimationTree" to="." method="_on_animation_tree_animation_finished"]
+[connection signal="timeout" from="surgir" to="." method="_on_surgir_timeout"]
+[connection signal="timeout" from="sumir" to="." method="_on_sumir_timeout"]

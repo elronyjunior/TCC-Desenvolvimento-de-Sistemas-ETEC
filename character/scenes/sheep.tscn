@@ -1,0 +1,235 @@
+[gd_scene load_steps=15 format=3 uid="uid://cpxlj6c1an64n"]
+
+[ext_resource type="Script" path="res://character/scrips/sheep.gd" id="1_51feq"]
+[ext_resource type="Texture2D" uid="uid://delv2ca1ea63l" path="res://character/assets/HappySheep_All.png" id="1_f1ycx"]
+[ext_resource type="Shader" path="res://shaders/1flash.gdshader" id="2_dir3j"]
+[ext_resource type="Script" path="res://character/scrips/drop_data.gd" id="2_jsh73"]
+[ext_resource type="PackedScene" uid="uid://bwtwgbbjv380x" path="res://Collectables/scenes/lifepot.tscn" id="3_kkmav"]
+[ext_resource type="AudioStream" uid="uid://b1ljn828lhfes" path="res://Audios/Musicas Jogo/sheep-bleating-223324.mp3" id="6_qoqtx"]
+
+[sub_resource type="Resource" id="Resource_5mxap"]
+script = ExtResource("2_jsh73")
+item_scene = ExtResource("3_kkmav")
+probability = 60.0
+min_amount = 1
+max_amount = 3
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_l6t64"]
+resource_local_to_scene = true
+shader = ExtResource("2_dir3j")
+shader_parameter/flash_color = Color(0.654902, 0.0627451, 0, 1)
+shader_parameter/flash_modifier = 0.578
+
+[sub_resource type="Animation" id="Animation_bxycq"]
+length = 0.001
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Texture:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Texture:use_parent_material")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Texture:material:shader_parameter/flash_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.654902, 0.0627451, 0, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Texture:material:shader_parameter/flash_modifier")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.578]
+}
+
+[sub_resource type="Animation" id="Animation_j7waj"]
+resource_name = "death"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Texture:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [1, 2, 3, 4]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Texture:use_parent_material")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.1001, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [true, false, false, false, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Texture:material:shader_parameter/flash_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.1, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0.654902, 0.0627451, 0, 1), Color(0.654902, 0.0627451, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Texture:material:shader_parameter/flash_modifier")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.1, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.578, 0.578, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_dernd"]
+resource_name = "idle"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Texture:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [1, 2, 3, 4, 5, 6, 7, 8]
+}
+
+[sub_resource type="Animation" id="Animation_5p753"]
+resource_name = "walk"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Texture:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [9, 10, 11, 12, 13]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q0ku4"]
+_data = {
+"RESET": SubResource("Animation_bxycq"),
+"death": SubResource("Animation_j7waj"),
+"idle": SubResource("Animation_dernd"),
+"walk": SubResource("Animation_5p753")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u6a4c"]
+size = Vector2(43.75, 32.5)
+
+[node name="Sheep" type="CharacterBody2D" groups=["inimigo", "safe_mob"]]
+scale = Vector2(0.4, 0.4)
+script = ExtResource("1_51feq")
+drops = Array[ExtResource("2_jsh73")]([SubResource("Resource_5mxap")])
+
+[node name="Texture" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_l6t64")
+use_parent_material = true
+texture = ExtResource("1_f1ycx")
+hframes = 8
+vframes = 2
+frame = 1
+
+[node name="Animation" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_q0ku4")
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+show_behind_parent = true
+position = Vector2(1.19209e-07, 1.19209e-07)
+shape = SubResource("RectangleShape2D_u6a4c")
+
+[node name="RandomMoveTimer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+show_behind_parent = true
+position = Vector2(7.10543e-15, 7.10543e-15)
+shape = SubResource("RectangleShape2D_u6a4c")
+debug_color = Color(0.989781, 0, 0.286363, 0.42)
+
+[node name="DetectorWallRight" type="RayCast2D" parent="."]
+scale = Vector2(2, 2)
+target_position = Vector2(18.75, 0)
+collide_with_areas = true
+
+[node name="DetectorWallLeft" type="RayCast2D" parent="."]
+scale = Vector2(2, 2)
+target_position = Vector2(-17.5, 0)
+collide_with_areas = true
+
+[node name="DetectorWallBottom" type="RayCast2D" parent="."]
+scale = Vector2(2, 2)
+target_position = Vector2(0, 16.25)
+collide_with_areas = true
+
+[node name="DetectorWallTop" type="RayCast2D" parent="."]
+scale = Vector2(2, 2)
+target_position = Vector2(0, -15)
+collide_with_areas = true
+
+[node name="sheepDie" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_qoqtx")
+bus = &"sfx"
+
+[connection signal="animation_finished" from="Animation" to="." method="_on_animation_finished"]
+[connection signal="timeout" from="RandomMoveTimer" to="." method="_on_RandomMoveTimer_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_body_entered"]

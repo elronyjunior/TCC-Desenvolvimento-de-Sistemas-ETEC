@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bbfsvh0yrob1f"]
+
+[ext_resource type="Script" path="res://data/CriaPastasUser.gd" id="1_1mak1"]
+
+[node name="CriaPastaUser" type="Node"]
+script = ExtResource("1_1mak1")

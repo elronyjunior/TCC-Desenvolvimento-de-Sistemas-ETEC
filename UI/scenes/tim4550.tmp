@@ -1,0 +1,123 @@
+[gd_scene load_steps=4 format=3 uid="uid://bb2htbq72dkvq"]
+
+[ext_resource type="Texture2D" uid="uid://36i1mvl2rsji" path="res://UI/images/time_gui.png" id="1_q0h3m"]
+[ext_resource type="Script" path="res://UI/scripts/time_ui.gd" id="1_rpcq0"]
+[ext_resource type="LabelSettings" uid="uid://bmklkt6jmcvy5" path="res://UI/scripts/time_ui.tres" id="2_46xdw"]
+
+[node name="TimeGui" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 80.0
+offset_bottom = 47.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_rpcq0")
+
+[node name="Background" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 47.0
+texture = ExtResource("1_q0h3m")
+region_rect = Rect2(0, 0, 16, 16)
+patch_margin_left = 7
+patch_margin_top = 7
+patch_margin_right = 7
+patch_margin_bottom = 7
+
+[node name="DayControl" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 15.0
+offset_top = 6.0
+offset_right = 66.0
+offset_bottom = 22.0
+
+[node name="Days" type="Label" parent="DayControl"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = -5.0
+offset_right = 53.0
+offset_bottom = 17.0
+text = "999"
+label_settings = ExtResource("2_46xdw")
+horizontal_alignment = 2
+metadata/_edit_lock_ = true
+
+[node name="sunBG" type="Sprite2D" parent="DayControl"]
+position = Vector2(8, 6)
+scale = Vector2(1.1875, 1.25)
+texture = ExtResource("1_q0h3m")
+region_enabled = true
+region_rect = Rect2(48, 16, 16, 16)
+
+[node name="sun" type="Sprite2D" parent="DayControl"]
+position = Vector2(8, 7)
+texture = ExtResource("1_q0h3m")
+region_enabled = true
+region_rect = Rect2(48, 0, 16, 16)
+
+[node name="ClockBG" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 23.0
+offset_right = 77.0
+offset_bottom = 41.0
+texture = ExtResource("1_q0h3m")
+region_rect = Rect2(16, 16, 16, 16)
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2
+
+[node name="ClockControl" type="Control" parent="ClockBG"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.0
+offset_top = -7.0
+offset_right = 30.0
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="hours" type="Label" parent="ClockBG/ClockControl"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = -3.0
+offset_right = 36.0
+offset_bottom = 17.0
+text = "23
+"
+label_settings = ExtResource("2_46xdw")
+metadata/_edit_lock_ = true
+
+[node name="space" type="Label" parent="ClockBG/ClockControl"]
+layout_mode = 0
+offset_left = 36.0
+offset_top = -3.0
+offset_right = 40.0
+offset_bottom = 17.0
+text = ":"
+label_settings = ExtResource("2_46xdw")
+metadata/_edit_lock_ = true
+
+[node name="minutes" type="Label" parent="ClockBG/ClockControl"]
+layout_mode = 0
+offset_left = 39.5
+offset_top = -3.0
+offset_right = 59.5
+offset_bottom = 17.0
+text = "59
+"
+label_settings = ExtResource("2_46xdw")
+metadata/_edit_lock_ = true
+
+[node name="hourglass" type="Sprite2D" parent="ClockBG/ClockControl"]
+position = Vector2(5, 7)
+scale = Vector2(1, 1.03333)
+texture = ExtResource("1_q0h3m")
+region_enabled = true
+region_rect = Rect2(32.5, 0, 15, 15)
+metadata/_edit_lock_ = true

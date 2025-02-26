@@ -1,0 +1,66 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxqlqd2ysqyty"]
+
+[ext_resource type="Script" path="res://cenas/New_game/slots/select_save.gd" id="1_vyoac"]
+[ext_resource type="Texture2D" uid="uid://b714eeaidvk6a" path="res://cenas/New_game/slots/fundo2.jpg" id="2_hii3c"]
+
+[node name="select_save" type="Control" node_paths=PackedStringArray("vbox")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vyoac")
+vbox = NodePath("VBoxContainer")
+metadata/_edit_horizontal_guides_ = [658.0]
+
+[node name="BoxContainer2" type="BoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+vertical = true
+
+[node name="TextureRect" type="TextureRect" parent="BoxContainer2"]
+modulate = Color(1, 1, 1, 0.662745)
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("2_hii3c")
+expand_mode = 5
+stretch_mode = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.348
+anchor_right = 0.702
+anchor_bottom = 1.009
+offset_left = 0.103973
+offset_top = 6.0
+offset_right = 0.295959
+offset_bottom = 0.167969
+alignment = 1
+
+[node name="BoxContainer" type="BoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.352
+anchor_top = 1.0
+anchor_right = 0.7
+anchor_bottom = 1.0
+offset_top = -88.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 2
+vertical = true
+
+[node name="BtnVoltar" type="Button" parent="BoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Voltar
+"
+
+[connection signal="pressed" from="BoxContainer/BtnVoltar" to="." method="_on_btn_voltar_pressed"]

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://ba821y8thxxm5"]
+
+[ext_resource type="Script" path="res://Collectables/scripts/collectable.gd" id="1_hffbk"]
+[ext_resource type="AudioStream" uid="uid://dc7xy1uejp0nb" path="res://Audios/1 - Adventure Begin.ogg" id="2_qpcj7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_616qr"]
+resource_local_to_scene = true
+
+[node name="Collectable" type="Area2D"]
+script = ExtResource("1_hffbk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_616qr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="coletarItems_sfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_qpcj7")

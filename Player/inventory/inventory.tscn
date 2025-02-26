@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://cr6o0cfelmcdi"]
+
+[ext_resource type="Script" path="res://Player/inventory/script/inventory.gd" id="1_bp44g"]
+
+[node name="inventory" type="CanvasLayer" node_paths=PackedStringArray("inventory_grid", "equip_grid")]
+script = ExtResource("1_bp44g")
+inventory_grid = NodePath("inventory_grid")
+equip_grid = NodePath("equip_drid")
+path_inventory_JSON = "res://Player/inventory/JSON/inventory.json"
+
+[node name="inventory_grid" type="GridContainer" parent="."]
+anchors_preset = -1
+anchor_left = 0.376
+anchor_top = 0.239
+anchor_right = 0.951
+anchor_bottom = 0.755
+offset_left = -0.152008
+offset_top = 0.127991
+offset_right = -0.552002
+offset_bottom = -0.240021
+columns = 8
+
+[node name="equip_drid" type="GridContainer" parent="."]
+anchors_preset = -1
+anchor_left = 0.042
+anchor_top = 0.065
+anchor_right = 0.256
+anchor_bottom = 0.968
+offset_left = -0.384003
+offset_top = -0.120003
+offset_right = 0.0879822
+offset_bottom = -0.264038

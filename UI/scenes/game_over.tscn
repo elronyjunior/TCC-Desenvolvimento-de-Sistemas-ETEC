@@ -1,0 +1,171 @@
+[gd_scene load_steps=8 format=3 uid="uid://b3i42sp6x5qsy"]
+
+[ext_resource type="Script" path="res://UI/scripts/game_over.gd" id="1_3y3di"]
+[ext_resource type="Theme" uid="uid://c4y3qsc3ijdi5" path="res://Player/menu.HUD/temas/default.tres" id="1_lf30q"]
+[ext_resource type="Texture2D" uid="uid://brtn82ppsyd0s" path="res://UI/images/protótipo (1).png" id="2_imaxl"]
+[ext_resource type="FontFile" uid="uid://c87r46h3mobcq" path="res://cenas/Login/Gamer.ttf" id="2_ybqpw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cejd3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kw3u2"]
+
+[sub_resource type="Theme" id="Theme_usirp"]
+HSeparator/styles/separator = SubResource("StyleBoxEmpty_cejd3")
+VSeparator/styles/separator = SubResource("StyleBoxEmpty_kw3u2")
+
+[node name="GameOver" type="CanvasLayer"]
+script = ExtResource("1_3y3di")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+auto_translate_mode = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+color = Color(0.784314, 0, 0, 0.368627)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+theme = SubResource("Theme_usirp")
+
+[node name="HSeparator" type="HSeparator" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.67
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.87
+mouse_filter = 2
+
+[node name="VSeparator2" type="VSeparator" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.0
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("2_imaxl")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="VSeparator" type="VSeparator" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.48
+
+[node name="HSeparator2" type="HSeparator" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.67
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.0
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.9
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_lf30q")
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer2/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.87
+
+[node name="Btn_Restart" type="Button" parent="VBoxContainer2/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Restart"
+
+[node name="VSeparator2" type="VSeparator" parent="VBoxContainer2/HBoxContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.03
+
+[node name="Btn_Config" type="Button" parent="VBoxContainer2/HBoxContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+text = "Configurações"
+
+[node name="VSeparator" type="VSeparator" parent="VBoxContainer2/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.03
+
+[node name="Btn_Quit" type="Button" parent="VBoxContainer2/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Sair"
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.9
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.493
+anchor_top = 0.638
+anchor_right = 0.493
+anchor_bottom = 0.638
+offset_left = -343.936
+offset_top = -79.424
+offset_right = 344.064
+offset_bottom = 79.576
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_ybqpw")
+theme_override_font_sizes/font_size = 200
+text = "GAME OVER"
+
+[connection signal="pressed" from="VBoxContainer2/HBoxContainer/VBoxContainer/Btn_Restart" to="." method="_on_btn_restart_pressed"]
+[connection signal="pressed" from="VBoxContainer2/HBoxContainer/VBoxContainer/Btn_Config" to="." method="_on_btn_config_pressed"]
+[connection signal="pressed" from="VBoxContainer2/HBoxContainer/VBoxContainer/Btn_Quit" to="." method="_on_btn_quit_pressed"]

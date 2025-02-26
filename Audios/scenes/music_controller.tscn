@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://dl8u7g5073887"]
+
+[ext_resource type="Script" path="res://Audios/scripts/music_controller.gd" id="1_c5vtp"]
+[ext_resource type="AudioStream" uid="uid://dmt33f8pp4tlj" path="res://Audios/Musicas Jogo/20 - Good Time.ogg" id="2_yebgw"]
+[ext_resource type="AudioStream" uid="uid://vt6mpx5lqrc4" path="res://Audios/Musicas Jogo/Menu6.wav" id="3_xwwny"]
+[ext_resource type="AudioStream" uid="uid://tkdfaufk20ue" path="res://Audios/Musicas Jogo/Cancel.wav" id="4_0uf33"]
+[ext_resource type="AudioStream" uid="uid://bnwy4col3fbb3" path="res://Audios/Musicas Jogo/Accept.wav" id="5_7wi60"]
+
+[node name="MusicController" type="Node2D"]
+script = ExtResource("1_c5vtp")
+
+[node name="bgMusic_menu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_yebgw")
+bus = &"music"
+parameters/looping = true
+
+[node name="bgSfx_menuButton" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_xwwny")
+bus = &"sfx"
+
+[node name="bgSfx_menuCancel" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_0uf33")
+bus = &"sfx"
+
+[node name="bgSfx_menuConfirm" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_7wi60")
+bus = &"sfx"

@@ -1,0 +1,187 @@
+[gd_scene load_steps=18 format=3 uid="uid://boyl7065nw8ut"]
+
+[ext_resource type="Script" path="res://inventory/scripts/ui.gd" id="1_eqj5k"]
+[ext_resource type="Script" path="res://Time/scripts/time_system.gd" id="2_io7xl"]
+[ext_resource type="Script" path="res://Time/scripts/date_time.gd" id="3_cyo78"]
+[ext_resource type="Script" path="res://Time/scripts/directional_light_2d.gd" id="4_ihu1l"]
+[ext_resource type="PackedScene" uid="uid://b5s2yvkfto0ed" path="res://UI/scenes/hudLevel.tscn" id="5_1deb1"]
+[ext_resource type="PackedScene" uid="uid://bb2htbq72dkvq" path="res://UI/scenes/time_ui.tscn" id="6_rjoqi"]
+[ext_resource type="PackedScene" uid="uid://b30gw6pens65b" path="res://inventory/scenes/inventoryGui.tscn" id="7_xvgwr"]
+[ext_resource type="PackedScene" uid="uid://dteg0gtof6gao" path="res://UI/scenes/HotBar.tscn" id="8_w7w3k"]
+[ext_resource type="Script" path="res://UI/scripts/subView_miniMap.gd" id="9_eagw1"]
+[ext_resource type="Texture2D" uid="uid://b13j6v5slfrre" path="res://character/assets/Captura de tela 2024-11-06 083037.png" id="10_v5xhr"]
+[ext_resource type="Texture2D" uid="uid://cbtxmidj1mdmm" path="res://UI/images/Triangle_34546.png" id="11_jxp06"]
+
+[sub_resource type="Resource" id="Resource_67kf4"]
+script = ExtResource("3_cyo78")
+seconds = 0
+minutes = 0
+hours = 13
+days = 0
+
+[sub_resource type="Resource" id="Resource_1rew6"]
+script = ExtResource("3_cyo78")
+seconds = 0
+minutes = 0
+hours = 6
+days = 0
+
+[sub_resource type="Resource" id="Resource_3fgqc"]
+script = ExtResource("3_cyo78")
+seconds = 0
+minutes = 0
+hours = 5
+days = 0
+
+[sub_resource type="Resource" id="Resource_bhi1j"]
+script = ExtResource("3_cyo78")
+seconds = 0
+minutes = 30
+hours = 17
+days = 0
+
+[sub_resource type="Resource" id="Resource_1w6uo"]
+script = ExtResource("3_cyo78")
+seconds = 0
+minutes = 30
+hours = 18
+days = 0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_imsvj"]
+bg_color = Color(0.380392, 0.745098, 0.745098, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_eqj5k")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.004
+anchor_top = 0.083
+anchor_right = 0.07
+anchor_bottom = 0.154
+offset_left = 0.392
+offset_top = 0.215996
+offset_right = 0.360001
+offset_bottom = 0.207993
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" parent="." instance=ExtResource("5_1deb1")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 2.0
+offset_top = 3.0
+offset_right = 118.0
+offset_bottom = 51.0
+
+[node name="TimeGui" parent="." instance=ExtResource("6_rjoqi")]
+anchors_preset = -1
+anchor_top = 0.082
+anchor_right = 0.071
+anchor_bottom = 0.154
+offset_left = 2.0
+offset_top = -0.136002
+offset_right = 0.208
+offset_bottom = 0.207993
+
+[node name="InventoryGui" parent="." instance=ExtResource("7_xvgwr")]
+visible = false
+offset_top = -82.0
+offset_bottom = 82.0
+scale = Vector2(2, 2)
+pivot_offset = Vector2(115, 82)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HotBar" parent="." instance=ExtResource("8_w7w3k")]
+anchor_left = 0.5
+anchor_top = 0.923
+anchor_right = 0.5
+anchor_bottom = 0.923
+offset_left = 0.0
+offset_top = -0.104004
+offset_right = 0.0
+offset_bottom = -0.104004
+grow_vertical = 0
+
+[node name="FPS" type="Label" parent="."]
+visible = false
+anchors_preset = -1
+anchor_left = 0.973
+anchor_right = 1.0
+anchor_bottom = 0.035
+offset_left = 0.104004
+offset_bottom = 0.32
+grow_horizontal = 0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+
+[node name="TimeSystem" type="Node" parent="."]
+script = ExtResource("2_io7xl")
+date_time = SubResource("Resource_67kf4")
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." node_paths=PackedStringArray("time_system")]
+position = Vector2(0, -2)
+blend_mode = 2
+script = ExtResource("4_ihu1l")
+day_color = Color(1, 1, 1, 1)
+night_color = Color(0.184314, 0.243137, 0.4, 1)
+dawn_color = Color(1, 0.713726, 0.756863, 1)
+dusk_color = Color(0.745098, 0.305882, 0.121569, 0.811765)
+day_start = SubResource("Resource_1rew6")
+dawn_start = SubResource("Resource_3fgqc")
+dusk_start = SubResource("Resource_bhi1j")
+night_start = SubResource("Resource_1w6uo")
+time_system = NodePath("../TimeSystem")
+
+[node name="PanelContainer2" type="PanelContainer" parent="."]
+visible = false
+custom_minimum_size = Vector2(66, 66)
+anchors_preset = -1
+anchor_left = 0.916
+anchor_top = 0.142
+anchor_right = 0.978
+anchor_bottom = 0.253
+offset_left = -0.232056
+offset_top = -0.0160065
+offset_right = 0.343994
+offset_bottom = 0.0559845
+grow_horizontal = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_imsvj")
+metadata/_edit_use_anchors_ = true
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="PanelContainer2"]
+layout_mode = 2
+
+[node name="SubViewport2" type="SubViewport" parent="PanelContainer2/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(66, 66)
+render_target_update_mode = 0
+script = ExtResource("9_eagw1")
+
+[node name="mapa" type="Sprite2D" parent="PanelContainer2/SubViewportContainer/SubViewport2"]
+clip_children = 2
+texture = ExtResource("10_v5xhr")
+centered = false
+
+[node name="Camera2D" type="Camera2D" parent="PanelContainer2/SubViewportContainer/SubViewport2"]
+
+[node name="maker2" type="Sprite2D" parent="PanelContainer2/SubViewportContainer"]
+position = Vector2(33, 33)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("11_jxp06")
+
+[connection signal="updatedTime" from="TimeSystem" to="TimeGui" method="_on_time_system_updated_time"]

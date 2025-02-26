@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b6dn3mh3fofqq"
+path="res://.godot/imported/slime morte.wav-a981b8b74ac1e70c077cc8c086c48dcf.sample"
+
+[deps]
+
+source_file="res://Audios/Musicas Jogo/slime morte.wav"
+dest_files=["res://.godot/imported/slime morte.wav-a981b8b74ac1e70c077cc8c086c48dcf.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

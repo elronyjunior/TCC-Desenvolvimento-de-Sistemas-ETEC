@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvyd61ctc46t4"]
+
+[ext_resource type="Script" path="res://UI/scripts/ItemStackGui.gd" id="1_ijaam"]
+[ext_resource type="FontFile" uid="uid://camch7ydtwgbt" path="res://inventory/NormalFont.ttf" id="2_adnix"]
+
+[node name="Panel" type="Panel"]
+scale = Vector2(2, 2)
+size_flags_horizontal = 3
+size_flags_vertical = 6
+script = ExtResource("1_ijaam")
+
+[node name="item" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+
+[node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(10, 11)
+layout_mode = 0
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 8.0
+offset_bottom = 9.0
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_adnix")
+theme_override_font_sizes/font_size = 8
+text = "10"
+horizontal_alignment = 2

@@ -1,0 +1,73 @@
+[gd_scene load_steps=5 format=3 uid="uid://c8vrsqov2vfb3"]
+
+[ext_resource type="Script" path="res://cenas/hud_manager.gd" id="1_berlb"]
+[ext_resource type="FontFile" uid="uid://eabwntnbuc30" path="res://Player/hb.HUD/Gamer.ttf" id="2_c8o0q"]
+[ext_resource type="Shader" path="res://Player/cinza.gdshader" id="3_22amr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1454x"]
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="." node_paths=PackedStringArray("XP", "FPS", "control", "h_box_container")]
+texture_filter = 1
+clip_contents = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+tooltip_text = "
+"
+script = ExtResource("1_berlb")
+XP = NodePath("container/MarginContainer/HBoxContainer/XP")
+FPS = NodePath("container/MarginContainer/HBoxContainer/FPS")
+control = NodePath(".")
+h_box_container = NodePath("container/VBoxContainer/HBoxContainer")
+fonte = ExtResource("2_c8o0q")
+hb_font_color = Color(1, 1, 0, 1)
+hb_font_color_shadow = Color(1, 0.521569, 0, 1)
+cinza = ExtResource("3_22amr")
+
+[node name="container" type="MarginContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = -2.0
+offset_right = 5.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/container"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/container/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/container"]
+layout_mode = 2
+theme_override_constants/margin_top = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/container/MarginContainer"]
+layout_mode = 2
+
+[node name="FPS" type="Label" parent="Control/container/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="HSeparator" type="HSeparator" parent="Control/container/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_1454x")
+
+[node name="XP" type="Label" parent="Control/container/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0

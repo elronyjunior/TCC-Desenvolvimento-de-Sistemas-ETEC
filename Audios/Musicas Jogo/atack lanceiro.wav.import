@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dcuh7awrv5nj7"
+path="res://.godot/imported/atack lanceiro.wav-5d782793528b348ec266e06df098389d.sample"
+
+[deps]
+
+source_file="res://Audios/Musicas Jogo/atack lanceiro.wav"
+dest_files=["res://.godot/imported/atack lanceiro.wav-5d782793528b348ec266e06df098389d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

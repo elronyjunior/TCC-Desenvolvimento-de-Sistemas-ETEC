@@ -1,0 +1,93 @@
+[gd_scene load_steps=13 format=3 uid="uid://bfy4ht0w8bphm"]
+
+[ext_resource type="Texture2D" uid="uid://x7i86w2i8pfm" path="res://NPCs/NPC_tscn/assets/sprite-guarda-PNG1.png" id="1_li2x7"]
+[ext_resource type="Script" path="res://NPCs/NPC_tscn/axe_npc/npc_cavaleiro.gd" id="1_v7wn2"]
+[ext_resource type="Texture2D" uid="uid://ckec8vhmjd7oe" path="res://NPCs/NPC_tscn/assets/Message-Exclamation.png" id="3_ev7dw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h4ylm"]
+size = Vector2(29, 47.25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_20kks"]
+atlas = ExtResource("1_li2x7")
+region = Rect2(0, 0, 19, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_agh3d"]
+atlas = ExtResource("1_li2x7")
+region = Rect2(19, 0, 19, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oaxg0"]
+atlas = ExtResource("1_li2x7")
+region = Rect2(38, 0, 19, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w1ajw"]
+atlas = ExtResource("1_li2x7")
+region = Rect2(57, 0, 19, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ichrh"]
+atlas = ExtResource("1_li2x7")
+region = Rect2(76, 0, 19, 19)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yljyw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_20kks")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_agh3d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oaxg0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w1ajw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ichrh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7lcp7"]
+radius = 79.511
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_evwak"]
+size = Vector2(73.5, 69.5)
+
+[node name="NpcCavaleiro" type="CharacterBody2D" node_paths=PackedStringArray("animation")]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_v7wn2")
+animation = NodePath("AnimatedSprite2D")
+
+[node name="colision" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_h4ylm")
+debug_color = Color(0.598663, 0, 0.155749, 0.42)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_yljyw")
+frame_progress = 0.596688
+
+[node name="AreaAviso" type="Area2D" parent="."]
+
+[node name="area_aviso" type="CollisionShape2D" parent="AreaAviso"]
+shape = SubResource("CircleShape2D_7lcp7")
+debug_color = Color(0.823529, 0.686275, 0, 0.0901961)
+
+[node name="AreaInteração" type="Area2D" parent="."]
+
+[node name="interação" type="CollisionShape2D" parent="AreaInteração"]
+shape = SubResource("RectangleShape2D_evwak")
+debug_color = Color(0.262745, 0.635294, 0, 0.172549)
+
+[node name="Sprite2D" type="Sprite2D" parent="AreaInteração"]
+visible = false
+position = Vector2(1, -18)
+scale = Vector2(0.576923, 0.576923)
+texture = ExtResource("3_ev7dw")
+
+[connection signal="body_entered" from="AreaAviso" to="." method="_on_body_aviso_area_entered"]
+[connection signal="body_exited" from="AreaAviso" to="." method="_on_body_aviso_area_exited"]
+[connection signal="body_entered" from="AreaInteração" to="." method="_on_body_interação_area_entered"]
+[connection signal="body_exited" from="AreaInteração" to="." method="_on_body_interação_area_exited"]

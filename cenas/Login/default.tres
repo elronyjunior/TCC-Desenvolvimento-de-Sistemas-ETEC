@@ -1,0 +1,84 @@
+[gd_resource type="Theme" load_steps=11 format=3 uid="uid://eqkweyf5ccy0"]
+
+[ext_resource type="FontFile" uid="uid://eabwntnbuc30" path="res://Player/hb.HUD/Gamer.ttf" id="1_33ugh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8nwx0"]
+bg_color = Color(0.41417, 0.298892, 0.953643, 1)
+border_width_left = 4
+border_width_bottom = 5
+border_color = Color(0.0767277, 0.058139, 0.392786, 1)
+expand_margin_left = 3.0
+expand_margin_right = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_at1jp"]
+bg_color = Color(0.41417, 0.298892, 0.953643, 1)
+border_width_left = 4
+border_width_bottom = 5
+border_color = Color(0.0767277, 0.058139, 0.392786, 1)
+expand_margin_left = 3.0
+expand_margin_right = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vlv2l"]
+bg_color = Color(0.406576, 0.489048, 0.984498, 1)
+border_width_left = 7
+border_width_bottom = 8
+border_color = Color(0.0767277, 0.058139, 0.392786, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 3.0
+expand_margin_right = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xpeiq"]
+bg_color = Color(0.957033, 0.091812, 0.571249, 1)
+border_width_left = 4
+border_width_bottom = 5
+border_color = Color(0.0767277, 0.058139, 0.392786, 1)
+expand_margin_left = 3.0
+expand_margin_right = 3.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p5bhm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r6j8n"]
+bg_color = Color(0.500096, 9.14484e-07, 0.243714, 0.27451)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0nnqc"]
+bg_color = Color(0.92085, 0.902147, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hx0ja"]
+bg_color = Color(0.568644, 0.525164, 0.999311, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sbnb0"]
+
+[resource]
+Button/font_sizes/font_size = 45
+Button/fonts/font = ExtResource("1_33ugh")
+Button/styles/focus = SubResource("StyleBoxFlat_8nwx0")
+Button/styles/hover = SubResource("StyleBoxFlat_at1jp")
+Button/styles/normal = SubResource("StyleBoxFlat_vlv2l")
+Button/styles/pressed = SubResource("StyleBoxFlat_xpeiq")
+HSeparator/styles/separator = SubResource("StyleBoxEmpty_p5bhm")
+Label/font_sizes/font_size = 14
+Label/fonts/font = null
+LineEdit/colors/font_color = Color(0, 0, 0, 1)
+LineEdit/styles/focus = SubResource("StyleBoxFlat_r6j8n")
+LineEdit/styles/normal = SubResource("StyleBoxFlat_0nnqc")
+Panel/styles/panel = SubResource("StyleBoxFlat_hx0ja")
+VSeparator/styles/separator = SubResource("StyleBoxEmpty_sbnb0")

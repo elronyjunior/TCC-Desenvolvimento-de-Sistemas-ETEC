@@ -1,0 +1,64 @@
+[gd_resource type="Theme" load_steps=10 format=3 uid="uid://c4y3qsc3ijdi5"]
+
+[ext_resource type="FontFile" uid="uid://eabwntnbuc30" path="res://Player/hb.HUD/Gamer.ttf" id="1_cexma"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c0t4y"]
+bg_color = Color(0.41417, 0.298892, 0.953643, 1)
+border_width_left = 5
+border_width_bottom = 4
+border_color = Color(0.0767277, 0.058139, 0.392786, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_at1jp"]
+bg_color = Color(0.41417, 0.298892, 0.953643, 1)
+border_width_left = 5
+border_width_bottom = 4
+border_color = Color(0.0767277, 0.058139, 0.392786, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vlv2l"]
+bg_color = Color(0.406576, 0.489048, 0.984498, 1)
+border_width_left = 7
+border_width_bottom = 8
+border_color = Color(0.0767277, 0.058139, 0.392786, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xpeiq"]
+bg_color = Color(0.957033, 0.091812, 0.571249, 1)
+border_width_left = 3
+border_width_bottom = 2
+border_color = Color(0.0767277, 0.058139, 0.392786, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p5bhm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xsybj"]
+bg_color = Color(0.579635, 0.361902, 0.974805, 1)
+border_width_left = 8
+border_width_bottom = 8
+border_color = Color(0.375798, 0.10048, 0.715086, 1)
+expand_margin_top = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hx0ja"]
+bg_color = Color(0.568644, 0.525164, 0.999311, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sbnb0"]
+
+[resource]
+Button/font_sizes/font_size = 50
+Button/fonts/font = ExtResource("1_cexma")
+Button/styles/focus = SubResource("StyleBoxFlat_c0t4y")
+Button/styles/hover = SubResource("StyleBoxFlat_at1jp")
+Button/styles/normal = SubResource("StyleBoxFlat_vlv2l")
+Button/styles/pressed = SubResource("StyleBoxFlat_xpeiq")
+HSeparator/styles/separator = SubResource("StyleBoxEmpty_p5bhm")
+Label/font_sizes/font_size = 30
+Label/fonts/font = ExtResource("1_cexma")
+Label/styles/normal = SubResource("StyleBoxFlat_xsybj")
+Panel/styles/panel = SubResource("StyleBoxFlat_hx0ja")
+VSeparator/styles/separator = SubResource("StyleBoxEmpty_sbnb0")

@@ -1,0 +1,100 @@
+[gd_resource type="Theme" load_steps=14 format=3 uid="uid://docd3vaw2a3kg"]
+
+[ext_resource type="FontFile" uid="uid://eabwntnbuc30" path="res://Player/hb.HUD/Gamer.ttf" id="1_lllig"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p6kxq"]
+content_margin_left = 8.0
+content_margin_right = 11.0
+bg_color = Color(0.957033, 0.091812, 0.571249, 1)
+skew = Vector2(0.5, 0)
+border_width_left = 4
+border_width_bottom = 5
+border_color = Color(0.0767277, 0.058139, 0.392786, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2rhbl"]
+content_margin_left = 8.0
+content_margin_right = 11.0
+bg_color = Color(0.41417, 0.298892, 0.953643, 1)
+skew = Vector2(0.5, 0)
+border_width_left = 4
+border_width_bottom = 5
+border_color = Color(0.0767277, 0.058139, 0.392786, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_svdif"]
+content_margin_left = 22.0
+content_margin_top = 4.0
+content_margin_right = 0.0
+content_margin_bottom = 10.0
+bg_color = Color(0.406576, 0.489048, 0.984498, 1)
+skew = Vector2(0.5, 0)
+border_width_left = 7
+border_width_bottom = 8
+border_color = Color(0.211284, 0.182565, 0.841216, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xqkv4"]
+content_margin_left = 8.0
+content_margin_right = 11.0
+bg_color = Color(0.957033, 0.091812, 0.571249, 1)
+skew = Vector2(0.5, 0)
+border_width_left = 4
+border_width_bottom = 5
+border_color = Color(0.0767277, 0.058139, 0.392786, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2ffvf"]
+bg_color = Color(0.406576, 0.489048, 0.984498, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y4f23"]
+bg_color = Color(0.957033, 0.091812, 0.571249, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hs555"]
+bg_color = Color(0.957033, 0.091812, 0.571249, 1)
+border_width_left = 6
+border_width_bottom = 4
+border_color = Color(0.0767277, 0.058139, 0.392786, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4qy66"]
+bg_color = Color(0.957033, 0.091812, 0.571249, 1)
+border_width_left = 6
+border_width_bottom = 4
+border_color = Color(0.0767277, 0.058139, 0.392786, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k1aok"]
+bg_color = Color(0.957033, 0.091812, 0.571249, 1)
+border_width_left = 6
+border_width_bottom = 4
+border_color = Color(0.0767277, 0.058139, 0.392786, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d1ccp"]
+bg_color = Color(0.406576, 0.489048, 0.984498, 1)
+border_width_left = 8
+border_width_bottom = 6
+border_color = Color(0.211284, 0.182565, 0.841216, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wp2oh"]
+bg_color = Color(0.957033, 0.091812, 0.571249, 1)
+border_width_left = 6
+border_width_bottom = 4
+border_color = Color(0.0767277, 0.058139, 0.392786, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ok84h"]
+bg_color = Color(0, 0, 0, 0.0117647)
+
+[resource]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/constants/h_separation = 26
+Button/constants/icon_max_width = 44
+Button/font_sizes/font_size = 47
+Button/fonts/font = ExtResource("1_lllig")
+Button/styles/focus = SubResource("StyleBoxFlat_p6kxq")
+Button/styles/hover = SubResource("StyleBoxFlat_2rhbl")
+Button/styles/normal = SubResource("StyleBoxFlat_svdif")
+Button/styles/pressed = SubResource("StyleBoxFlat_xqkv4")
+HSlider/styles/grabber_area = SubResource("StyleBoxFlat_2ffvf")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_y4f23")
+OptionButton/constants/arrow_margin = 20
+OptionButton/styles/focus = SubResource("StyleBoxFlat_hs555")
+OptionButton/styles/hover = SubResource("StyleBoxFlat_4qy66")
+OptionButton/styles/hover_pressed = SubResource("StyleBoxFlat_k1aok")
+OptionButton/styles/normal = SubResource("StyleBoxFlat_d1ccp")
+OptionButton/styles/pressed = SubResource("StyleBoxFlat_wp2oh")
+TabContainer/styles/panel = SubResource("StyleBoxFlat_ok84h")

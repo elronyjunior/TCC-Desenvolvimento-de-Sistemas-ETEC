@@ -1,0 +1,101 @@
+[gd_scene load_steps=14 format=3 uid="uid://nsm1iybellpq"]
+
+[ext_resource type="Script" path="res://NPCs/NPC_tscn/axe_npc/npc_boss.gd" id="1_0lf2e"]
+[ext_resource type="Texture2D" uid="uid://ddv7agl0x8iq0" path="res://NPCs/NPC_tscn/axe_npc/Armored Axeman.png" id="2_lfm70"]
+[ext_resource type="Texture2D" uid="uid://ckec8vhmjd7oe" path="res://NPCs/NPC_tscn/assets/Message-Exclamation.png" id="3_8ttor"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ftm18"]
+atlas = ExtResource("2_lfm70")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vc1y8"]
+atlas = ExtResource("2_lfm70")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_10vuk"]
+atlas = ExtResource("2_lfm70")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wpjk6"]
+atlas = ExtResource("2_lfm70")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eh2up"]
+atlas = ExtResource("2_lfm70")
+region = Rect2(400, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7bge2"]
+atlas = ExtResource("2_lfm70")
+region = Rect2(500, 0, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2gkyc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ftm18")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vc1y8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_10vuk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wpjk6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eh2up")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7bge2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h4ylm"]
+size = Vector2(16, 19)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7lcp7"]
+radius = 39.1152
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_evwak"]
+size = Vector2(37, 52)
+
+[node name="NpcBoss" type="CharacterBody2D"]
+script = ExtResource("1_0lf2e")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_2gkyc")
+frame_progress = 0.81725
+
+[node name="colision" type="CollisionShape2D" parent="."]
+position = Vector2(2, -2.5)
+shape = SubResource("RectangleShape2D_h4ylm")
+debug_color = Color(0.598663, 0, 0.155749, 0.42)
+
+[node name="AreaAviso" type="Area2D" parent="."]
+
+[node name="area_aviso" type="CollisionShape2D" parent="AreaAviso"]
+position = Vector2(3, 0)
+shape = SubResource("CircleShape2D_7lcp7")
+debug_color = Color(0.823529, 0.686275, 0, 0.0901961)
+
+[node name="AreaInteração" type="Area2D" parent="."]
+
+[node name="interação" type="CollisionShape2D" parent="AreaInteração"]
+position = Vector2(2.5, -1)
+shape = SubResource("RectangleShape2D_evwak")
+debug_color = Color(0.262745, 0.635294, 0, 0.172549)
+
+[node name="Sprite2D" type="Sprite2D" parent="AreaInteração"]
+visible = false
+position = Vector2(1, -18)
+scale = Vector2(0.576923, 0.576923)
+texture = ExtResource("3_8ttor")
+
+[connection signal="body_entered" from="AreaAviso" to="." method="_on_body_aviso_area_entered"]
+[connection signal="body_exited" from="AreaAviso" to="." method="_on_body_aviso_area_exited"]
+[connection signal="body_entered" from="AreaInteração" to="." method="_on_body_interação_area_entered"]
+[connection signal="body_exited" from="AreaInteração" to="." method="_on_body_interação_area_exited"]

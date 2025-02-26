@@ -1,0 +1,236 @@
+[gd_scene load_steps=21 format=3 uid="uid://nejfv7n3aswk"]
+
+[ext_resource type="Texture2D" uid="uid://bi71i4xsbtd2v" path="res://character/assets/slime.png" id="1_5meyn"]
+[ext_resource type="Script" path="res://character/scrips/slime.gd" id="1_ncmdh"]
+[ext_resource type="Script" path="res://character/scrips/drop_data.gd" id="2_1c4og"]
+[ext_resource type="PackedScene" uid="uid://ywmac1n7bddj" path="res://UI/scenes/health_bar.tscn" id="3_7i0ag"]
+[ext_resource type="PackedScene" uid="uid://blu751kjvdox6" path="res://Collectables/scenes/manapot.tscn" id="3_ut2ca"]
+[ext_resource type="AudioStream" uid="uid://b6dn3mh3fofqq" path="res://Audios/Musicas Jogo/slime morte.wav" id="6_ew2lo"]
+[ext_resource type="AudioStream" uid="uid://dq4boo855l4lx" path="res://Audios/Musicas Jogo/slime attack.wav" id="7_sjgsw"]
+[ext_resource type="AudioStream" uid="uid://uhwpgo76x1g8" path="res://Audios/Musicas Jogo/danoSlime.wav" id="8_875o3"]
+
+[sub_resource type="Resource" id="Resource_hiijr"]
+script = ExtResource("2_1c4og")
+item_scene = ExtResource("3_ut2ca")
+probability = 100.0
+min_amount = 1
+max_amount = 2
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ait56"]
+size = Vector2(19, 16)
+
+[sub_resource type="Animation" id="Animation_hn46n"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_mjvqp"]
+resource_name = "death"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [28, 29, 30, 31, 32]
+}
+
+[sub_resource type="Animation" id="Animation_qb22l"]
+resource_name = "idle"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_gbo5b"]
+resource_name = "walk"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [7, 12, 8, 9, 10, 11]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_s1k64"]
+_data = {
+"RESET": SubResource("Animation_hn46n"),
+"death": SubResource("Animation_mjvqp"),
+"idle": SubResource("Animation_qb22l"),
+"walk": SubResource("Animation_gbo5b")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gxh3i"]
+size = Vector2(17, 14)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c2l57"]
+radius = 36.1049
+
+[sub_resource type="Animation" id="Animation_3aoeh"]
+resource_name = "HurtBlink"
+length = 0.4
+loop_mode = 1
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("texture/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.2001),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0.831373, 0, 0.0313726, 0.501961), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_lik46"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("texture/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.831373, 0, 0.0313726, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mvxpy"]
+_data = {
+"HurtBlink": SubResource("Animation_3aoeh"),
+"RESET": SubResource("Animation_lik46")
+}
+
+[node name="Slime" type="CharacterBody2D" node_paths=PackedStringArray("_texture", "_animation") groups=["inimigo"]]
+position = Vector2(0, 1)
+script = ExtResource("1_ncmdh")
+drops = Array[ExtResource("2_1c4og")]([SubResource("Resource_hiijr")])
+_texture = NodePath("texture")
+_animation = NodePath("Animation")
+
+[node name="HitBox" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" groups=["inimigo"]]
+position = Vector2(0.5, 2)
+shape = SubResource("RectangleShape2D_ait56")
+
+[node name="texture" type="Sprite2D" parent="."]
+clip_children = 2
+texture = ExtResource("1_5meyn")
+hframes = 7
+vframes = 5
+
+[node name="ColorRect" type="ColorRect" parent="texture"]
+offset_left = -17.0
+offset_top = -10.0
+offset_right = 17.0
+offset_bottom = 14.0
+color = Color(0.831373, 0, 0.0313726, 0)
+
+[node name="Animation" type="AnimationPlayer" parent="."]
+root_node = NodePath("../texture")
+libraries = {
+"": SubResource("AnimationLibrary_s1k64")
+}
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+show_behind_parent = true
+position = Vector2(0.5, 2)
+shape = SubResource("RectangleShape2D_gxh3i")
+debug_color = Color(0.259207, 0.634259, 1.92523e-07, 0.42)
+
+[node name="DetectionArea" type="Area2D" parent="."]
+position = Vector2(0, 3.25)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
+show_behind_parent = true
+shape = SubResource("CircleShape2D_c2l57")
+
+[node name="HealthBar" parent="." instance=ExtResource("3_7i0ag")]
+offset_left = -5.0
+offset_top = -8.0
+offset_right = 4.0
+offset_bottom = -7.0
+
+[node name="Effects" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_mvxpy")
+}
+
+[node name="hurtTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="RandomMoveTimer" type="Timer" parent="."]
+wait_time = 2.5
+one_shot = true
+
+[node name="DetectorWallRight" type="RayCast2D" parent="."]
+target_position = Vector2(14, 0)
+collide_with_areas = true
+
+[node name="DetectorWallLeft" type="RayCast2D" parent="."]
+target_position = Vector2(-14, 0)
+collide_with_areas = true
+
+[node name="DetectorWallBottom" type="RayCast2D" parent="."]
+target_position = Vector2(0, 14)
+collide_with_areas = true
+
+[node name="DetectorWallTop" type="RayCast2D" parent="."]
+target_position = Vector2(0, -10)
+collide_with_areas = true
+
+[node name="bg_sfxMorte" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_ew2lo")
+bus = &"sfx"
+
+[node name="bg_sfxAttack" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_sjgsw")
+bus = &"sfx"
+
+[node name="bg_sfxDano" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_875o3")
+bus = &"sfx"
+
+[connection signal="animation_finished" from="Animation" to="." method="_on_animation_finished"]
+[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]
+[connection signal="timeout" from="RandomMoveTimer" to="." method="_on_RandomMoveTimer_timeout"]

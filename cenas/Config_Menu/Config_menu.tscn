@@ -1,0 +1,924 @@
+[gd_scene load_steps=45 format=3 uid="uid://cuffmwcttakxh"]
+
+[ext_resource type="Theme" uid="uid://docd3vaw2a3kg" path="res://cenas/Config_Menu/Config_menu.tres" id="1_pgif8"]
+[ext_resource type="Script" path="res://cenas/Config_Menu/config_menu.gd" id="1_sqic5"]
+[ext_resource type="Texture2D" uid="uid://dwcmlvdkuniqx" path="res://cenas/Config_Menu/config_bg.png" id="2_03xdn"]
+[ext_resource type="Texture2D" uid="uid://emqn0vjhrxih" path="res://icon/seta_galinha.png" id="2_8p5a0"]
+[ext_resource type="FontFile" uid="uid://eabwntnbuc30" path="res://Player/hb.HUD/Gamer.ttf" id="4_rc2nt"]
+[ext_resource type="ButtonGroup" uid="uid://bgsayr54jow6s" path="res://cenas/Config_Menu/btn_config_group.tres" id="7_irtly"]
+[ext_resource type="Texture2D" uid="uid://bh4gcqlrbl5xt" path="res://cenas/Config_Menu/icon/Sprite-0001.png" id="7_klo48"]
+[ext_resource type="Texture2D" uid="uid://bg6f1hyiorq5w" path="res://cenas/Config_Menu/icon/Music-0.png" id="8_1dbhl"]
+[ext_resource type="Texture2D" uid="uid://brew0lgka1hom" path="res://cenas/Config_Menu/icon/Game-Controller.png" id="9_46o2k"]
+[ext_resource type="Texture2D" uid="uid://r8cyrk5uscye" path="res://cenas/Config_Menu/icon/Question-Mark.png" id="10_pm764"]
+[ext_resource type="Texture2D" uid="uid://doqlg6ojd1xa" path="res://cenas/Config_Menu/icon/Speaker-0.png" id="11_q3c7p"]
+[ext_resource type="Texture2D" uid="uid://bfvwwa4fvsjdl" path="res://cenas/Config_Menu/icon/sol.png" id="11_vj1mp"]
+[ext_resource type="Texture2D" uid="uid://5psx2msvv5eu" path="res://cenas/Config_Menu/icon/Speaker-Crossed.png" id="12_w6e40"]
+[ext_resource type="Texture2D" uid="uid://bvsjmnj7r6pth" path="res://cenas/Config_Menu/icon/Music-1.png" id="13_tp5vh"]
+[ext_resource type="Script" path="res://cenas/Config_Menu/somGeral.gd" id="13_xb2i0"]
+[ext_resource type="Texture2D" uid="uid://cfkl6b8m7dlcu" path="res://cenas/Config_Menu/icon/instagram.png" id="15_6ykg5"]
+[ext_resource type="Texture2D" uid="uid://daok80jqbgb7a" path="res://cenas/Config_Menu/Knight13.png" id="15_t6krt"]
+[ext_resource type="PackedScene" uid="uid://sr3v5ots23e1" path="res://Player/menu.HUD/config/config_controles.tscn" id="15_wsvta"]
+[ext_resource type="FontFile" uid="uid://c87r46h3mobcq" path="res://cenas/Login/Gamer.ttf" id="16_kitla"]
+[ext_resource type="Texture2D" uid="uid://y7c31vwggqi8" path="res://cenas/Config_Menu/icon/email.png" id="16_kj5kk"]
+[ext_resource type="Texture2D" uid="uid://bf0ege8h2w4ut" path="res://cenas/Config_Menu/Knight18.png" id="16_o0h2y"]
+[ext_resource type="Texture2D" uid="uid://c0yojd70xatoe" path="res://cenas/Config_Menu/Knight39.png" id="17_5y7h4"]
+[ext_resource type="Texture2D" uid="uid://dxqsvk060voog" path="res://icon/galinha.png" id="18_jlcq3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hikqe"]
+
+[sub_resource type="Theme" id="Theme_i0xe0"]
+VSeparator/styles/separator = SubResource("StyleBoxEmpty_hikqe")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j6ocj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vjxqk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8gjrh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hrqbg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hbcxb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8yshc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7opss"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yc6ew"]
+
+[sub_resource type="Theme" id="Theme_lkw7k"]
+Label/font_sizes/font_size = 15
+Label/fonts/font = ExtResource("16_kitla")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8i1k8"]
+content_margin_left = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wf8ao"]
+bg_color = Color(0, 0, 0, 0.145098)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v7du5"]
+content_margin_left = 13.0
+content_margin_right = 10.0
+bg_color = Color(0.957033, 0.091812, 0.571249, 1)
+skew = Vector2(0.5, 0)
+border_width_left = 5
+border_width_bottom = 3
+border_color = Color(0.0767277, 0.058139, 0.392786, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ar1qj"]
+content_margin_left = 13.0
+content_margin_right = 10.0
+bg_color = Color(0.406576, 0.489048, 0.984498, 1)
+skew = Vector2(0.5, 0)
+border_width_left = 5
+border_width_bottom = 3
+border_color = Color(0.211284, 0.182565, 0.841216, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yif10"]
+bg_color = Color(0, 0, 0, 0.596078)
+
+[sub_resource type="Theme" id="Theme_otr3q"]
+Label/styles/normal = SubResource("StyleBoxEmpty_8i1k8")
+TabContainer/font_sizes/font_size = 35
+TabContainer/fonts/font = ExtResource("4_rc2nt")
+TabContainer/styles/panel = SubResource("StyleBoxFlat_wf8ao")
+TabContainer/styles/tab_focus = SubResource("StyleBoxFlat_v7du5")
+TabContainer/styles/tab_hovered = SubResource("StyleBoxFlat_v7du5")
+TabContainer/styles/tab_selected = SubResource("StyleBoxFlat_v7du5")
+TabContainer/styles/tab_unselected = SubResource("StyleBoxFlat_ar1qj")
+TabContainer/styles/tabbar_background = SubResource("StyleBoxFlat_yif10")
+
+[sub_resource type="Theme" id="Theme_nnk4g"]
+Label/font_sizes/font_size = 18
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hv3g1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hdeup"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vq0ni"]
+
+[node name="ConfigMenu" type="Control" node_paths=PackedStringArray("img_icon", "tab_inicial", "VBoxControles", "option_button", "option_button2", "hslider")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sqic5")
+img_icon = NodePath("lados/VBoxPai/VBoxInformaçoes/TextureRect")
+tab_inicial = NodePath("lados/ScrolTab/TabContainer/VBoxTela")
+VBoxControles = NodePath("lados/ScrolTab/TabContainer/VBoxControles/VBoxContainer")
+option_button = NodePath("lados/ScrolTab/TabContainer/VBoxTela/VBoxContainer/VBoxContainer/OptionButton")
+option_button2 = NodePath("lados/ScrolTab/TabContainer/VBoxTela/VBoxContainer/VBoxContainer3/OptionButton")
+hslider = NodePath("lados/ScrolTab/TabContainer/VBoxTela/VBoxContainer/VBoxBrilho/HBoxContainer/HSlider")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_03xdn")
+expand_mode = 5
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.156863, 0.156863, 0.156863, 0.0196078)
+
+[node name="lados" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxPai" type="VBoxContainer" parent="lados"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.8
+theme = SubResource("Theme_i0xe0")
+
+[node name="VBoxInformaçoes" type="VBoxContainer" parent="lados/VBoxPai"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.37
+
+[node name="HBoxContainer" type="HBoxContainer" parent="lados/VBoxPai/VBoxInformaçoes"]
+layout_mode = 2
+size_flags_vertical = 6
+size_flags_stretch_ratio = 0.21
+
+[node name="HSeparator" type="HSeparator" parent="lados/VBoxPai/VBoxInformaçoes/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.08
+theme_override_styles/separator = SubResource("StyleBoxEmpty_j6ocj")
+
+[node name="TextureButton" type="TextureButton" parent="lados/VBoxPai/VBoxInformaçoes/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+texture_normal = ExtResource("2_8p5a0")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="lados/VBoxPai/VBoxInformaçoes/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("4_rc2nt")
+theme_override_font_sizes/font_size = 45
+text = "Configurações"
+
+[node name="VSeparator2" type="VSeparator" parent="lados/VBoxPai/VBoxInformaçoes"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.07
+
+[node name="TextureRect" type="TextureRect" parent="lados/VBoxPai/VBoxInformaçoes"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+texture = ExtResource("7_klo48")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="VSeparator" type="VSeparator" parent="lados/VBoxPai"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="lados/VBoxPai"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.37
+
+[node name="HSeparator2" type="HSeparator" parent="lados/VBoxPai/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.07
+theme_override_styles/separator = SubResource("StyleBoxEmpty_vjxqk")
+
+[node name="VBoxBtn" type="VBoxContainer" parent="lados/VBoxPai/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.73
+theme = ExtResource("1_pgif8")
+
+[node name="BtnTela" type="Button" parent="lados/VBoxPai/HBoxContainer/VBoxBtn"]
+layout_mode = 2
+theme_override_constants/icon_max_width = 32
+theme_override_constants/align_to_largest_stylebox = 1
+theme_override_icons/icon = ExtResource("7_klo48")
+toggle_mode = true
+button_pressed = true
+button_group = ExtResource("7_irtly")
+text = "Tela"
+icon = ExtResource("7_klo48")
+alignment = 0
+
+[node name="VSeparator" type="VSeparator" parent="lados/VBoxPai/HBoxContainer/VBoxBtn"]
+layout_mode = 2
+
+[node name="BtnSom" type="Button" parent="lados/VBoxPai/HBoxContainer/VBoxBtn"]
+layout_mode = 2
+theme_override_constants/icon_max_width = 32
+theme_override_icons/icon = ExtResource("8_1dbhl")
+toggle_mode = true
+button_group = ExtResource("7_irtly")
+text = "Som"
+icon = ExtResource("8_1dbhl")
+alignment = 0
+
+[node name="VSeparator2" type="VSeparator" parent="lados/VBoxPai/HBoxContainer/VBoxBtn"]
+layout_mode = 2
+
+[node name="BtnControles" type="Button" parent="lados/VBoxPai/HBoxContainer/VBoxBtn"]
+layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("7_irtly")
+text = "Controles"
+icon = ExtResource("9_46o2k")
+alignment = 0
+
+[node name="VSeparator3" type="VSeparator" parent="lados/VBoxPai/HBoxContainer/VBoxBtn"]
+layout_mode = 2
+
+[node name="BtnAjuda" type="Button" parent="lados/VBoxPai/HBoxContainer/VBoxBtn"]
+layout_mode = 2
+theme_override_constants/icon_max_width = 25
+theme_override_icons/icon = ExtResource("10_pm764")
+toggle_mode = true
+button_group = ExtResource("7_irtly")
+text = "Ajuda"
+icon = ExtResource("10_pm764")
+alignment = 0
+
+[node name="HSeparator" type="HSeparator" parent="lados/VBoxPai/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.03
+theme_override_styles/separator = SubResource("StyleBoxEmpty_8gjrh")
+
+[node name="HSeparator" type="HSeparator" parent="lados"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.01
+theme_override_styles/separator = SubResource("StyleBoxEmpty_hrqbg")
+
+[node name="ScrolTab" type="ScrollContainer" parent="lados"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.95
+
+[node name="TabContainer" type="TabContainer" parent="lados/ScrolTab"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_pgif8")
+current_tab = 1
+tabs_visible = false
+all_tabs_in_front = true
+
+[node name="VBoxTela" type="VBoxContainer" parent="lados/ScrolTab/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="VSeparator" type="VSeparator" parent="lados/ScrolTab/TabContainer/VBoxTela"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.07
+localize_numeral_system = false
+theme_override_styles/separator = SubResource("StyleBoxEmpty_hbcxb")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="lados/ScrolTab/TabContainer/VBoxTela"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxBrilho" type="VBoxContainer" parent="lados/ScrolTab/TabContainer/VBoxTela/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+size_flags_stretch_ratio = 1.62
+
+[node name="Label" type="Label" parent="lados/ScrolTab/TabContainer/VBoxTela/VBoxContainer/VBoxBrilho"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_rc2nt")
+theme_override_font_sizes/font_size = 49
+text = "Brilho"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="lados/ScrolTab/TabContainer/VBoxTela/VBoxContainer/VBoxBrilho"]
+layout_mode = 2
+
+[node name="HSeparator2" type="HSeparator" parent="lados/ScrolTab/TabContainer/VBoxTela/VBoxContainer/VBoxBrilho/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+theme_override_styles/separator = SubResource("StyleBoxEmpty_8yshc")
+
+[node name="TextureRect" type="TextureRect" parent="lados/ScrolTab/TabContainer/VBoxTela/VBoxContainer/VBoxBrilho/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+texture = ExtResource("11_vj1mp")
+expand_mode = 5
+
+[node name="HSeparator3" type="HSeparator" parent="lados/ScrolTab/TabContainer/VBoxTela/VBoxContainer/VBoxBrilho/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.03
+theme_override_styles/separator = SubResource("StyleBoxEmpty_8yshc")
+
+[node name="HSlider" type="HSlider" parent="lados/ScrolTab/TabContainer/VBoxTela/VBoxContainer/VBoxBrilho/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+min_value = 0.7
+max_value = 2.0
+step = 0.01
+value = 1.0
+
+[node name="HSeparator" type="HSeparator" parent="lados/ScrolTab/TabContainer/VBoxTela/VBoxContainer/VBoxBrilho/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+theme_override_styles/separator = SubResource("StyleBoxEmpty_7opss")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="lados/ScrolTab/TabContainer/VBoxTela/VBoxContainer/VBoxBrilho"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+size_flags_stretch_ratio = 0.65
+
+[node name="resetBrilho" type="Button" parent="lados/ScrolTab/TabContainer/VBoxTela/VBoxContainer/VBoxBrilho/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+text = "Restaurar"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="lados/ScrolTab/TabContainer/VBoxTela/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+size_flags_stretch_ratio = 0.0
+
+[node name="Label" type="Label" parent="lados/ScrolTab/TabContainer/VBoxTela/VBoxContainer/VBoxContainer3"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("4_rc2nt")
+theme_override_font_sizes/font_size = 49
+text = "Modo de tela"
+horizontal_alignment = 1
+
+[node name="VSeparator" type="VSeparator" parent="lados/ScrolTab/TabContainer/VBoxTela/VBoxContainer/VBoxContainer3"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.49
+localize_numeral_system = false
+theme_override_styles/separator = SubResource("StyleBoxEmpty_hbcxb")
+
+[node name="OptionButton" type="OptionButton" parent="lados/ScrolTab/TabContainer/VBoxTela/VBoxContainer/VBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="lados/ScrolTab/TabContainer/VBoxTela/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+size_flags_stretch_ratio = 1.81
+
+[node name="Label" type="Label" parent="lados/ScrolTab/TabContainer/VBoxTela/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("4_rc2nt")
+theme_override_font_sizes/font_size = 49
+text = "Resolução da tela"
+horizontal_alignment = 1
+
+[node name="VSeparator" type="VSeparator" parent="lados/ScrolTab/TabContainer/VBoxTela/VBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.49
+localize_numeral_system = false
+theme_override_styles/separator = SubResource("StyleBoxEmpty_hbcxb")
+
+[node name="OptionButton" type="OptionButton" parent="lados/ScrolTab/TabContainer/VBoxTela/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+
+[node name="VBoxSom" type="VBoxContainer" parent="lados/ScrolTab/TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="VSeparator" type="VSeparator" parent="lados/ScrolTab/TabContainer/VBoxSom"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.07
+localize_numeral_system = false
+theme_override_styles/separator = SubResource("StyleBoxEmpty_hbcxb")
+
+[node name="VBoxVolumeGeral" type="VBoxContainer" parent="lados/ScrolTab/TabContainer/VBoxSom"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+
+[node name="Label" type="Label" parent="lados/ScrolTab/TabContainer/VBoxSom/VBoxVolumeGeral"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_rc2nt")
+theme_override_font_sizes/font_size = 49
+text = "Volume Geral"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="lados/ScrolTab/TabContainer/VBoxSom/VBoxVolumeGeral"]
+layout_mode = 2
+
+[node name="HSeparator2" type="HSeparator" parent="lados/ScrolTab/TabContainer/VBoxSom/VBoxVolumeGeral/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+theme_override_styles/separator = SubResource("StyleBoxEmpty_8yshc")
+
+[node name="TextureRect" type="TextureRect" parent="lados/ScrolTab/TabContainer/VBoxSom/VBoxVolumeGeral/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.05
+texture = ExtResource("11_q3c7p")
+expand_mode = 5
+
+[node name="HSeparator3" type="HSeparator" parent="lados/ScrolTab/TabContainer/VBoxSom/VBoxVolumeGeral/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.03
+theme_override_styles/separator = SubResource("StyleBoxEmpty_8yshc")
+
+[node name="HSliderGeral" type="HSlider" parent="lados/ScrolTab/TabContainer/VBoxSom/VBoxVolumeGeral/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.001
+script = ExtResource("13_xb2i0")
+bus_name = "Master"
+
+[node name="HSeparator" type="HSeparator" parent="lados/ScrolTab/TabContainer/VBoxSom/VBoxVolumeGeral/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+theme_override_styles/separator = SubResource("StyleBoxEmpty_7opss")
+
+[node name="VBoxVolumeInimigos" type="VBoxContainer" parent="lados/ScrolTab/TabContainer/VBoxSom"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+
+[node name="Label" type="Label" parent="lados/ScrolTab/TabContainer/VBoxSom/VBoxVolumeInimigos"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_rc2nt")
+theme_override_font_sizes/font_size = 49
+text = "Musica"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="lados/ScrolTab/TabContainer/VBoxSom/VBoxVolumeInimigos"]
+layout_mode = 2
+
+[node name="HSeparator2" type="HSeparator" parent="lados/ScrolTab/TabContainer/VBoxSom/VBoxVolumeInimigos/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+theme_override_styles/separator = SubResource("StyleBoxEmpty_8yshc")
+
+[node name="TextureRect" type="TextureRect" parent="lados/ScrolTab/TabContainer/VBoxSom/VBoxVolumeInimigos/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.05
+texture = ExtResource("11_q3c7p")
+expand_mode = 5
+
+[node name="HSeparator3" type="HSeparator" parent="lados/ScrolTab/TabContainer/VBoxSom/VBoxVolumeInimigos/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.03
+theme_override_styles/separator = SubResource("StyleBoxEmpty_8yshc")
+
+[node name="HSliderMusic" type="HSlider" parent="lados/ScrolTab/TabContainer/VBoxSom/VBoxVolumeInimigos/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.001
+script = ExtResource("13_xb2i0")
+bus_name = "music"
+
+[node name="HSeparator" type="HSeparator" parent="lados/ScrolTab/TabContainer/VBoxSom/VBoxVolumeInimigos/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+theme_override_styles/separator = SubResource("StyleBoxEmpty_7opss")
+
+[node name="VBoxVolumeEfeitos" type="VBoxContainer" parent="lados/ScrolTab/TabContainer/VBoxSom"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+
+[node name="Label" type="Label" parent="lados/ScrolTab/TabContainer/VBoxSom/VBoxVolumeEfeitos"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_rc2nt")
+theme_override_font_sizes/font_size = 49
+text = "Efeitos"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="lados/ScrolTab/TabContainer/VBoxSom/VBoxVolumeEfeitos"]
+layout_mode = 2
+
+[node name="HSeparator2" type="HSeparator" parent="lados/ScrolTab/TabContainer/VBoxSom/VBoxVolumeEfeitos/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+theme_override_styles/separator = SubResource("StyleBoxEmpty_8yshc")
+
+[node name="TextureRect" type="TextureRect" parent="lados/ScrolTab/TabContainer/VBoxSom/VBoxVolumeEfeitos/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.05
+texture = ExtResource("11_q3c7p")
+expand_mode = 5
+
+[node name="HSeparator3" type="HSeparator" parent="lados/ScrolTab/TabContainer/VBoxSom/VBoxVolumeEfeitos/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.03
+theme_override_styles/separator = SubResource("StyleBoxEmpty_8yshc")
+
+[node name="HSliderSfx" type="HSlider" parent="lados/ScrolTab/TabContainer/VBoxSom/VBoxVolumeEfeitos/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.001
+script = ExtResource("13_xb2i0")
+bus_name = "sfx"
+
+[node name="HSeparator" type="HSeparator" parent="lados/ScrolTab/TabContainer/VBoxSom/VBoxVolumeEfeitos/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+theme_override_styles/separator = SubResource("StyleBoxEmpty_7opss")
+
+[node name="HBoxBtnSom" type="HBoxContainer" parent="lados/ScrolTab/TabContainer/VBoxSom"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+
+[node name="HSeparator3" type="HSeparator" parent="lados/ScrolTab/TabContainer/VBoxSom/HBoxBtnSom"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.27
+theme_override_styles/separator = SubResource("StyleBoxEmpty_yc6ew")
+
+[node name="BtnMutar" type="Button" parent="lados/ScrolTab/TabContainer/VBoxSom/HBoxBtnSom"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 12
+text = "mutar"
+icon = ExtResource("12_w6e40")
+alignment = 0
+
+[node name="HSeparator2" type="HSeparator" parent="lados/ScrolTab/TabContainer/VBoxSom/HBoxBtnSom"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_yc6ew")
+
+[node name="BtnAlto" type="Button" parent="lados/ScrolTab/TabContainer/VBoxSom/HBoxBtnSom"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 12
+text = "Alto"
+icon = ExtResource("13_tp5vh")
+alignment = 0
+
+[node name="HSeparator" type="HSeparator" parent="lados/ScrolTab/TabContainer/VBoxSom/HBoxBtnSom"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.27
+theme_override_styles/separator = SubResource("StyleBoxEmpty_yc6ew")
+
+[node name="VSeparator2" type="VSeparator" parent="lados/ScrolTab/TabContainer/VBoxSom"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.07
+localize_numeral_system = false
+theme_override_styles/separator = SubResource("StyleBoxEmpty_hbcxb")
+
+[node name="VBoxControles" type="VBoxContainer" parent="lados/ScrolTab/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="lados/ScrolTab/TabContainer/VBoxControles"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ConfigControles" parent="lados/ScrolTab/TabContainer/VBoxControles/VBoxContainer" instance=ExtResource("15_wsvta")]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxAjuda" type="VBoxContainer" parent="lados/ScrolTab/TabContainer"]
+visible = false
+layout_mode = 2
+theme = SubResource("Theme_lkw7k")
+metadata/_tab_index = 3
+
+[node name="VBoxTutorialBasico" type="VBoxContainer" parent="lados/ScrolTab/TabContainer/VBoxAjuda"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.45
+
+[node name="TabContainer" type="TabContainer" parent="lados/ScrolTab/TabContainer/VBoxAjuda/VBoxTutorialBasico"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_otr3q")
+tab_alignment = 1
+current_tab = 3
+
+[node name="Movimentação" type="VBoxContainer" parent="lados/ScrolTab/TabContainer/VBoxAjuda/VBoxTutorialBasico/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="lados/ScrolTab/TabContainer/VBoxAjuda/VBoxTutorialBasico/TabContainer/Movimentação"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.82
+
+[node name="Label" type="Label" parent="lados/ScrolTab/TabContainer/VBoxAjuda/VBoxTutorialBasico/TabContainer/Movimentação/VBoxContainer2"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+text = "Para fazer o personagem se mover você pode utilizar as teclas (W) ir para cima, (S) ir para baixo, (A) ir para esquerda, (D) ir para direita e o botão de interação é o (E). Lembrando que essas teclas são as padrões do sistema, se tiver feito alguma alteração pode muda-las para o padrão em CONTROLES."
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="lados/ScrolTab/TabContainer/VBoxAjuda/VBoxTutorialBasico/TabContainer/Movimentação"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="lados/ScrolTab/TabContainer/VBoxAjuda/VBoxTutorialBasico/TabContainer/Movimentação/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.63
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="lados/ScrolTab/TabContainer/VBoxAjuda/VBoxTutorialBasico/TabContainer/Movimentação/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("15_t6krt")
+expand_mode = 3
+
+[node name="Attack" type="VBoxContainer" parent="lados/ScrolTab/TabContainer/VBoxAjuda/VBoxTutorialBasico/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="lados/ScrolTab/TabContainer/VBoxAjuda/VBoxTutorialBasico/TabContainer/Attack"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.82
+
+[node name="Label" type="Label" parent="lados/ScrolTab/TabContainer/VBoxAjuda/VBoxTutorialBasico/TabContainer/Attack/VBoxContainer2"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 33
+text = "Todas as classes possuem um ataque padrão, que é diferente para cada uma, garantindo ainda mais variedade no estilo de combate. Esses ataques são ativados pela tecla (J), oferecendo uma ação básica, porém distinta, de acordo com a classe selecionada."
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="lados/ScrolTab/TabContainer/VBoxAjuda/VBoxTutorialBasico/TabContainer/Attack"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="lados/ScrolTab/TabContainer/VBoxAjuda/VBoxTutorialBasico/TabContainer/Attack/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.63
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="lados/ScrolTab/TabContainer/VBoxAjuda/VBoxTutorialBasico/TabContainer/Attack/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("16_o0h2y")
+expand_mode = 3
+
+[node name="Habilidades" type="VBoxContainer" parent="lados/ScrolTab/TabContainer/VBoxAjuda/VBoxTutorialBasico/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="lados/ScrolTab/TabContainer/VBoxAjuda/VBoxTutorialBasico/TabContainer/Habilidades"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.82
+
+[node name="Label" type="Label" parent="lados/ScrolTab/TabContainer/VBoxAjuda/VBoxTutorialBasico/TabContainer/Habilidades/VBoxContainer2"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_nnk4g")
+theme_override_font_sizes/font_size = 27
+text = "Cada classe no jogo possui um conjunto exclusivo de 2 habilidades especiais, que são únicas para cada tipo de personagem.
+Habilidade Especial 1 (Tecla K): Um ataque poderoso exclusivo da classe, ideal para causar grandes danos ou realizar ações estratégicas.
+Ataque em Área (Tecla L): Ataca vários inimigos ao mesmo tempo, perfeito para controlar grupos e lidar com múltiplos adversários."
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="lados/ScrolTab/TabContainer/VBoxAjuda/VBoxTutorialBasico/TabContainer/Habilidades"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="lados/ScrolTab/TabContainer/VBoxAjuda/VBoxTutorialBasico/TabContainer/Habilidades/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.63
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="lados/ScrolTab/TabContainer/VBoxAjuda/VBoxTutorialBasico/TabContainer/Habilidades/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("17_5y7h4")
+expand_mode = 3
+
+[node name="Sobre nós" type="VBoxContainer" parent="lados/ScrolTab/TabContainer/VBoxAjuda/VBoxTutorialBasico/TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 3
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="lados/ScrolTab/TabContainer/VBoxAjuda/VBoxTutorialBasico/TabContainer/Sobre nós"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.82
+
+[node name="Label" type="Label" parent="lados/ScrolTab/TabContainer/VBoxAjuda/VBoxTutorialBasico/TabContainer/Sobre nós/VBoxContainer2"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 27
+text = "Somos um grupo de cinco amigos apaixonados por jogos e inovação. Nos unimos com o objetivo de criar um jogo único, algo que ainda não encontramos no mercado. Cada um de nós traz habilidades e ideias diversas, e juntos estamos sempre empenhados em melhorar e trazer novas experiências ao universo dos games. Estamos comprometidos com a qualidade e a criatividade, sempre buscando entregar algo que surpreenda e inspire os jogadores."
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="lados/ScrolTab/TabContainer/VBoxAjuda/VBoxTutorialBasico/TabContainer/Sobre nós"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VSeparator" type="VSeparator" parent="lados/ScrolTab/TabContainer/VBoxAjuda/VBoxTutorialBasico/TabContainer/Sobre nós/VBoxContainer3"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.27
+theme_override_styles/separator = SubResource("StyleBoxEmpty_hv3g1")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="lados/ScrolTab/TabContainer/VBoxAjuda/VBoxTutorialBasico/TabContainer/Sobre nós/VBoxContainer3"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.63
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="lados/ScrolTab/TabContainer/VBoxAjuda/VBoxTutorialBasico/TabContainer/Sobre nós/VBoxContainer3/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("18_jlcq3")
+expand_mode = 3
+
+[node name="VSeparator2" type="VSeparator" parent="lados/ScrolTab/TabContainer/VBoxAjuda/VBoxTutorialBasico/TabContainer/Sobre nós/VBoxContainer3"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.08
+theme_override_styles/separator = SubResource("StyleBoxEmpty_hv3g1")
+
+[node name="VBoxContatos" type="VBoxContainer" parent="lados/ScrolTab/TabContainer/VBoxAjuda"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+
+[node name="Label" type="Label" parent="lados/ScrolTab/TabContainer/VBoxAjuda/VBoxContatos"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_rc2nt")
+theme_override_font_sizes/font_size = 51
+text = "Meios de contato
+"
+horizontal_alignment = 1
+
+[node name="HBoxInstagram" type="HBoxContainer" parent="lados/ScrolTab/TabContainer/VBoxAjuda/VBoxContatos"]
+layout_mode = 2
+
+[node name="HSeparator2" type="HSeparator" parent="lados/ScrolTab/TabContainer/VBoxAjuda/VBoxContatos/HBoxInstagram"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+theme_override_styles/separator = SubResource("StyleBoxEmpty_hdeup")
+
+[node name="TextureRect" type="TextureRect" parent="lados/ScrolTab/TabContainer/VBoxAjuda/VBoxContatos/HBoxInstagram"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.27
+texture = ExtResource("15_6ykg5")
+expand_mode = 5
+
+[node name="HSeparator" type="HSeparator" parent="lados/ScrolTab/TabContainer/VBoxAjuda/VBoxContatos/HBoxInstagram"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+theme_override_styles/separator = SubResource("StyleBoxEmpty_hdeup")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="lados/ScrolTab/TabContainer/VBoxAjuda/VBoxContatos/HBoxInstagram"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.0
+
+[node name="VSeparator" type="VSeparator" parent="lados/ScrolTab/TabContainer/VBoxAjuda/VBoxContatos/HBoxInstagram/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.73
+theme_override_styles/separator = SubResource("StyleBoxEmpty_vq0ni")
+
+[node name="LinkButton" type="LinkButton" parent="lados/ScrolTab/TabContainer/VBoxAjuda/VBoxContatos/HBoxInstagram/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("4_rc2nt")
+theme_override_font_sizes/font_size = 45
+text = "Instagram"
+uri = "https://www.instagram.com/rampageoftherealms?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+
+[node name="VSeparator2" type="VSeparator" parent="lados/ScrolTab/TabContainer/VBoxAjuda/VBoxContatos/HBoxInstagram/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.73
+theme_override_styles/separator = SubResource("StyleBoxEmpty_vq0ni")
+
+[node name="HBoxEmail" type="HBoxContainer" parent="lados/ScrolTab/TabContainer/VBoxAjuda/VBoxContatos"]
+layout_mode = 2
+
+[node name="HSeparator2" type="HSeparator" parent="lados/ScrolTab/TabContainer/VBoxAjuda/VBoxContatos/HBoxEmail"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+theme_override_styles/separator = SubResource("StyleBoxEmpty_hdeup")
+
+[node name="TextureRect" type="TextureRect" parent="lados/ScrolTab/TabContainer/VBoxAjuda/VBoxContatos/HBoxEmail"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.27
+texture = ExtResource("16_kj5kk")
+expand_mode = 5
+
+[node name="HSeparator" type="HSeparator" parent="lados/ScrolTab/TabContainer/VBoxAjuda/VBoxContatos/HBoxEmail"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+theme_override_styles/separator = SubResource("StyleBoxEmpty_hdeup")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="lados/ScrolTab/TabContainer/VBoxAjuda/VBoxContatos/HBoxEmail"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.0
+
+[node name="VSeparator" type="VSeparator" parent="lados/ScrolTab/TabContainer/VBoxAjuda/VBoxContatos/HBoxEmail/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.73
+theme_override_styles/separator = SubResource("StyleBoxEmpty_vq0ni")
+
+[node name="LinkButton" type="LinkButton" parent="lados/ScrolTab/TabContainer/VBoxAjuda/VBoxContatos/HBoxEmail/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("4_rc2nt")
+theme_override_font_sizes/font_size = 45
+text = "Email"
+uri = "mailto:rampageoftherealms@gmail.com"
+
+[node name="VSeparator2" type="VSeparator" parent="lados/ScrolTab/TabContainer/VBoxAjuda/VBoxContatos/HBoxEmail/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.73
+theme_override_styles/separator = SubResource("StyleBoxEmpty_vq0ni")
+
+[connection signal="pressed" from="lados/VBoxPai/VBoxInformaçoes/HBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="lados/VBoxPai/HBoxContainer/VBoxBtn/BtnTela" to="." method="_on_btn_tela_pressed"]
+[connection signal="pressed" from="lados/VBoxPai/HBoxContainer/VBoxBtn/BtnSom" to="." method="_on_btn_som_pressed"]
+[connection signal="pressed" from="lados/VBoxPai/HBoxContainer/VBoxBtn/BtnControles" to="." method="_on_btn_controles_pressed"]
+[connection signal="pressed" from="lados/VBoxPai/HBoxContainer/VBoxBtn/BtnAjuda" to="." method="_on_btn_ajuda_pressed"]
+[connection signal="value_changed" from="lados/ScrolTab/TabContainer/VBoxTela/VBoxContainer/VBoxBrilho/HBoxContainer/HSlider" to="." method="_on_hslider_value_changed"]
+[connection signal="pressed" from="lados/ScrolTab/TabContainer/VBoxTela/VBoxContainer/VBoxBrilho/VBoxContainer2/resetBrilho" to="." method="_on_reset_brilho_pressed"]
+[connection signal="pressed" from="lados/ScrolTab/TabContainer/VBoxSom/HBoxBtnSom/BtnMutar" to="." method="_on_button_Mutar_pressed"]
+[connection signal="pressed" from="lados/ScrolTab/TabContainer/VBoxSom/HBoxBtnSom/BtnAlto" to="." method="_on_btn_alto_pressed"]

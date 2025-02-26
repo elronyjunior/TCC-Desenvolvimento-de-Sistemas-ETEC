@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ManaItem" load_steps=3 format=3 uid="uid://b8inhiu5djsc5"]
+
+[ext_resource type="Script" path="res://inventory/items/mana_item.gd" id="1_prdcy"]
+[ext_resource type="Texture2D" uid="uid://beyqow384mnyo" path="res://icon/manapote.png" id="2_gd1di"]
+
+[resource]
+script = ExtResource("1_prdcy")
+mana_increase = 1
+name = "ManaPot"
+texture = ExtResource("2_gd1di")
+maxAmountPrStack = 10

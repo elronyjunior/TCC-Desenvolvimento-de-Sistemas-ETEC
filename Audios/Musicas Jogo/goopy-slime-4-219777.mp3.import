@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://blpu2ryactwvy"
+path="res://.godot/imported/goopy-slime-4-219777.mp3-682c491db7e4d3b420fdd8cacc1c0b17.mp3str"
+
+[deps]
+
+source_file="res://Audios/Musicas Jogo/goopy-slime-4-219777.mp3"
+dest_files=["res://.godot/imported/goopy-slime-4-219777.mp3-682c491db7e4d3b420fdd8cacc1c0b17.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

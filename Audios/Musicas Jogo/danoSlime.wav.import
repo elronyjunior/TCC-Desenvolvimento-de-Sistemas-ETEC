@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://uhwpgo76x1g8"
+path="res://.godot/imported/danoSlime.wav-39db7b6b4d4b490d2f5fdf35d65d783e.sample"
+
+[deps]
+
+source_file="res://Audios/Musicas Jogo/danoSlime.wav"
+dest_files=["res://.godot/imported/danoSlime.wav-39db7b6b4d4b490d2f5fdf35d65d783e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

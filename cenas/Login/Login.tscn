@@ -1,0 +1,353 @@
+[gd_scene load_steps=29 format=3 uid="uid://dwk2rv18vh2y4"]
+
+[ext_resource type="Script" path="res://cenas/Login/control.gd" id="1_cpt8b"]
+[ext_resource type="Texture2D" uid="uid://b1nv2par1q53a" path="res://cenas/title screem/inicial.png" id="2_w7nyf"]
+[ext_resource type="Texture2D" uid="uid://srll4t6ro7sp" path="res://cenas/title screem/logo2.png" id="3_kco6g"]
+[ext_resource type="Theme" uid="uid://eqkweyf5ccy0" path="res://cenas/Login/default.tres" id="4_47wvt"]
+[ext_resource type="FontFile" uid="uid://c87r46h3mobcq" path="res://cenas/Login/Gamer.ttf" id="5_aktgk"]
+[ext_resource type="Texture2D" uid="uid://dn1kowutmmja6" path="res://cenas/Login/pivot.png" id="6_ltn2v"]
+[ext_resource type="FontFile" uid="uid://eabwntnbuc30" path="res://Player/hb.HUD/Gamer.ttf" id="7_dk3o5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v10ch"]
+
+[sub_resource type="Theme" id="Theme_ah8ln"]
+HSeparator/styles/separator = SubResource("StyleBoxEmpty_v10ch")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_48oq1"]
+
+[sub_resource type="Theme" id="Theme_im8u7"]
+HSeparator/styles/separator = SubResource("StyleBoxEmpty_48oq1")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3hg47"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iddcd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yh2cv"]
+bg_color = Color(0.406576, 0.489048, 0.984498, 1)
+border_width_left = 2
+border_width_bottom = 1
+border_color = Color(0.0767277, 0.058139, 0.392786, 1)
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c07np"]
+bg_color = Color(0.957033, 0.091812, 0.571249, 1)
+border_width_left = 2
+border_width_bottom = 1
+border_color = Color(0.0767277, 0.058139, 0.392786, 1)
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jer1f"]
+bg_color = Color(0.957033, 0.091812, 0.571249, 1)
+border_width_left = 2
+border_width_bottom = 1
+border_color = Color(0.0767277, 0.058139, 0.392786, 1)
+expand_margin_left = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a0nei"]
+bg_color = Color(0.957033, 0.091812, 0.571249, 1)
+border_width_left = 4
+border_width_bottom = 5
+border_color = Color(0.0767277, 0.058139, 0.392786, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 3.0
+expand_margin_right = 3.0
+
+[sub_resource type="Theme" id="Theme_7qa4d"]
+Button/styles/focus = SubResource("StyleBoxFlat_a0nei")
+Button/styles/hover = SubResource("StyleBoxFlat_a0nei")
+Button/styles/pressed = SubResource("StyleBoxFlat_a0nei")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_72p65"]
+bg_color = Color(0.996901, 0.568039, 0.550536, 1)
+border_width_left = 4
+border_width_bottom = 5
+border_color = Color(0.0767277, 0.058139, 0.392786, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 3.0
+expand_margin_right = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vfr7r"]
+bg_color = Color(0.935449, 0.382258, 0.19386, 1)
+border_width_left = 7
+border_width_bottom = 8
+border_color = Color(0.0767277, 0.058139, 0.392786, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 3.0
+expand_margin_right = 3.0
+
+[sub_resource type="Theme" id="Theme_y5kod"]
+Button/fonts/font = ExtResource("7_dk3o5")
+Button/styles/focus = SubResource("StyleBoxFlat_72p65")
+Button/styles/hover = SubResource("StyleBoxFlat_72p65")
+Button/styles/normal = SubResource("StyleBoxFlat_vfr7r")
+Button/styles/pressed = SubResource("StyleBoxFlat_72p65")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pppjp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fvai2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q37yf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5lrfo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qffgk"]
+
+[sub_resource type="Theme" id="Theme_2lrdq"]
+Button/colors/font_outline_color = Color(0.200276, 0.666633, 0.0663846, 1)
+Button/constants/outline_size = 11
+Button/font_sizes/font_size = 28
+Button/fonts/font = ExtResource("7_dk3o5")
+Button/styles/disabled = SubResource("StyleBoxEmpty_pppjp")
+Button/styles/focus = SubResource("StyleBoxEmpty_fvai2")
+Button/styles/hover = SubResource("StyleBoxEmpty_q37yf")
+Button/styles/normal = SubResource("StyleBoxEmpty_5lrfo")
+Button/styles/pressed = SubResource("StyleBoxEmpty_qffgk")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pc147"]
+
+[node name="Login" type="Control" node_paths=PackedStringArray("Email", "Senha", "errorlbl")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_ah8ln")
+script = ExtResource("1_cpt8b")
+Email = NodePath("Panel/HBoxContainer/VBoxContainer/TextEmail")
+Senha = NodePath("Panel/HBoxContainer/VBoxContainer/HBoxContainer/TextSenha")
+errorlbl = NodePath("Panel/HBoxContainer/VBoxContainer/lbLogado")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Panel/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect2" type="TextureRect" parent="Panel/Control/Panel"]
+custom_minimum_size = Vector2(1150, 650)
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_bottom = 4.0
+size_flags_vertical = 3
+texture = ExtResource("2_w7nyf")
+expand_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/Control/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HSeparator" type="HSeparator" parent="Panel/Control/Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/Control/Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="Panel/Control/Panel/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 2
+texture = ExtResource("3_kco6g")
+expand_mode = 5
+
+[node name="HSeparator2" type="HSeparator" parent="Panel/Control/Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_im8u7")
+
+[node name="HSeparator2" type="HSeparator" parent="Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/separator = SubResource("StyleBoxEmpty_3hg47")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("4_47wvt")
+
+[node name="VSeparator2" type="VSeparator" parent="Panel/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="lbLogado" type="Label" parent="Panel/HBoxContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.172549, 0.329412, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("7_dk3o5")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+clip_text = true
+
+[node name="lbEmail" type="Label" parent="Panel/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("5_aktgk")
+theme_override_font_sizes/font_size = 28
+text = "Email"
+
+[node name="TextEmail" type="LineEdit" parent="Panel/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HSeparator2" type="HSeparator" parent="Panel/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+theme_override_styles/separator = SubResource("StyleBoxEmpty_iddcd")
+
+[node name="lbSenha" type="Label" parent="Panel/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("5_aktgk")
+theme_override_font_sizes/font_size = 28
+text = "Senha"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextSenha" type="LineEdit" parent="Panel/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+size_flags_stretch_ratio = 8.34
+theme_override_font_sizes/font_size = 19
+alignment = 1
+secret = true
+
+[node name="HSeparator" type="HSeparator" parent="Panel/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="VSeparator2" type="VSeparator" parent="Panel/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.27
+
+[node name="btnVer" type="Button" parent="Panel/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_yh2cv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_c07np")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jer1f")
+theme_override_styles/normal = SubResource("StyleBoxFlat_yh2cv")
+toggle_mode = true
+text = "
+"
+icon = ExtResource("6_ltn2v")
+icon_alignment = 1
+
+[node name="VSeparator" type="VSeparator" parent="Panel/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.27
+
+[node name="HSeparator" type="HSeparator" parent="Panel/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+theme_override_styles/separator = SubResource("StyleBoxEmpty_iddcd")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HSeparator2" type="HSeparator" parent="Panel/HBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.27
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/HBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="btnLogin" type="Button" parent="Panel/HBoxContainer/VBoxContainer/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_7qa4d")
+text = "Login"
+
+[node name="btnSing_up" type="Button" parent="Panel/HBoxContainer/VBoxContainer/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_y5kod")
+text = "Cadastrar"
+
+[node name="Button" type="Button" parent="Panel/HBoxContainer/VBoxContainer/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_2lrdq")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "recuperar senha"
+
+[node name="HSeparator" type="HSeparator" parent="Panel/HBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.27
+
+[node name="VSeparator" type="VSeparator" parent="Panel/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HSeparator" type="HSeparator" parent="Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/separator = SubResource("StyleBoxEmpty_pc147")
+
+[connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/btnVer" to="." method="_on_btn_ver_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/HBoxContainer2/VBoxContainer/btnLogin" to="." method="_on_btn_login_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/HBoxContainer2/VBoxContainer/btnSing_up" to="." method="_on_btn_sing_up_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/HBoxContainer2/VBoxContainer/Button" to="." method="_on_button_pressed"]

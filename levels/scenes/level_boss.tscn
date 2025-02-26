@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://dptnsg688dvs6"]
+
+[ext_resource type="Script" path="res://levels/scripts/test_level.gd" id="1_iwcq7"]
+[ext_resource type="PackedScene" uid="uid://boyl7065nw8ut" path="res://UI/scenes/ui.tscn" id="2_uk04r"]
+[ext_resource type="Script" path="res://levels/scripts/personagensSpawner.gd" id="3_0cl64"]
+[ext_resource type="PackedScene" uid="uid://bs47x3vr7hvhk" path="res://character/scenes/spawner.tscn" id="4_wgeay"]
+[ext_resource type="PackedScene" uid="uid://nsm1iybellpq" path="res://NPCs/NPC_tscn/axe_npc/npc_boss.tscn" id="5_uc4xx"]
+[ext_resource type="AudioStream" uid="uid://bii3o6p5lvs7j" path="res://Audios/24 - Final Area.ogg" id="6_0wh8p"]
+[ext_resource type="PackedScene" uid="uid://reocyv20e877" path="res://levels/scenes/dungeon_boss.tscn" id="7_bo4ya"]
+
+[node name="Level_boss" type="Node2D"]
+position = Vector2(4, 4)
+script = ExtResource("1_iwcq7")
+
+[node name="UI" parent="." instance=ExtResource("2_uk04r")]
+
+[node name="Ysort" type="Node2D" parent="."]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(0, -6)
+
+[node name="Personagens" type="Node2D" parent="Ysort"]
+y_sort_enabled = true
+position = Vector2(2, 9)
+script = ExtResource("3_0cl64")
+
+[node name="Marker2D" type="Marker2D" parent="Ysort/Personagens"]
+y_sort_enabled = true
+position = Vector2(73, 162)
+
+[node name="Enemy" type="Node2D" parent="Ysort"]
+y_sort_enabled = true
+position = Vector2(247, 191)
+
+[node name="spawner" parent="Ysort" instance=ExtResource("4_wgeay")]
+y_sort_enabled = true
+position = Vector2(522, 296)
+
+[node name="NpcBoss" parent="Ysort" instance=ExtResource("5_uc4xx")]
+position = Vector2(124, 169)
+
+[node name="Itens" type="Node2D" parent="."]
+position = Vector2(1, -2)
+
+[node name="Audio" type="Node2D" parent="."]
+
+[node name="final_area" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource("6_0wh8p")
+autoplay = true
+bus = &"music"
+parameters/looping = true
+
+[node name="dungeonBoss" parent="." instance=ExtResource("7_bo4ya")]

@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://blu751kjvdox6"]
+
+[ext_resource type="PackedScene" uid="uid://ba821y8thxxm5" path="res://Collectables/scenes/collectable.tscn" id="1_wwnk5"]
+[ext_resource type="Resource" uid="uid://b8inhiu5djsc5" path="res://inventory/items/manapot.tres" id="2_jkc4p"]
+[ext_resource type="Texture2D" uid="uid://beyqow384mnyo" path="res://icon/manapote.png" id="3_me5tp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ukvl3"]
+resource_local_to_scene = true
+
+[node name="manapot" instance=ExtResource("1_wwnk5")]
+texture_filter = 1
+itemRes = ExtResource("2_jkc4p")
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("RectangleShape2D_ukvl3")
+
+[node name="Sprite2D" parent="." index="1"]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_me5tp")

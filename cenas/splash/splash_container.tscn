@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://c226bys1sxxb"]
+
+[ext_resource type="Script" path="res://addons/awesome_splash/core/SplashContainer.gd" id="1_p37yy"]
+[ext_resource type="PackedScene" uid="uid://dwk2rv18vh2y4" path="res://cenas/Login/Login.tscn" id="2_vdif1"]
+[ext_resource type="PackedScene" uid="uid://dfhwfsoinmcxh" path="res://src/demo_collection/circle_jump_02/splash_screen.tscn" id="3_761a2"]
+
+[node name="SplashContainer" type="Node2D"]
+script = ExtResource("1_p37yy")
+move_to_scene = ExtResource("2_vdif1")
+
+[node name="SplashCircleJump02" parent="." instance=ExtResource("3_761a2")]
+logo_path = "res://icon/galinha branca.png"
+title = "Aether Group"
+description = "Games studio"
+title_font_size = 180.0

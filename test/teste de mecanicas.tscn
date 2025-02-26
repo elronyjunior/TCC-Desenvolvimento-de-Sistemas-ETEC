@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ds5wrtymwn5bq"]
+
+[ext_resource type="Script" path="res://test/teste_de_mecanicas.gd" id="1_amp2f"]
+
+[node name="TesteDeMecanicas" type="Node2D"]
+script = ExtResource("1_amp2f")

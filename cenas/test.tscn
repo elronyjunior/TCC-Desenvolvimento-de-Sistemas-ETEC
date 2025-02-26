@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://2mpf1uat34by"]
+
+[ext_resource type="PackedScene" uid="uid://c6a57beeib6p4" path="res://Player/player.tscn" id="1_o5xpv"]
+[ext_resource type="Texture2D" uid="uid://ba6lamnxhti3e" path="res://Player/sprite/player.png" id="5_h6n77"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nlxix"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(367, 308)
+
+[node name="Player" parent="." instance=ExtResource("1_o5xpv")]
+position = Vector2(-182, -13)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["inimigo"]]
+position = Vector2(-225, -20)
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" groups=["inimigo"]]
+position = Vector2(-3, -10)
+texture = ExtResource("5_h6n77")
+hframes = 6
+vframes = 10
+frame = 56
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" groups=["inimigo"]]
+shape = SubResource("RectangleShape2D_nlxix")
+
+[node name="Area2D" type="Area2D" parent="CharacterBody2D" groups=["inimigo"]]
+position = Vector2(36, 2)

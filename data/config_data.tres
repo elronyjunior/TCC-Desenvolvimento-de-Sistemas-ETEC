@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ConfigData" load_steps=2 format=3 uid="uid://d4mlotoledyne"]
+
+[ext_resource type="Script" path="res://scripts/config_data.gd" id="1_hg3sl"]
+
+[resource]
+script = ExtResource("1_hg3sl")
+key_binds = {
+"0": "Q",
+"1": "E",
+"2": "R",
+"attack": "J",
+"baixo": "S",
+"cima": "W",
+"direita": "D",
+"esquerda": "A",
+"ui_swap_input_direction": "U"
+}
